@@ -5,7 +5,7 @@ import { loadFull } from 'tsparticles';
 
 import particlesOptions from '../particles.json';
 
-function WelcomeScreen() {
+function WelcomeScreen({setWelcome}) {
   const particlesInit = useCallback((main) => {
     loadFull(main);
   }, []);
@@ -52,7 +52,23 @@ function WelcomeScreen() {
                 },
               }}
             >
-              IoT and full-stack software developer.
+              IoT and full-stack software developer,
+            </Typography>
+            <Typography
+              color='white'
+              variant='h4'
+              sx={{
+                textAlign: 'center',
+                fontSize: {
+                  xs: '1.2em', // theme.breakpoints.up('xs')
+                  sm: '1.4em', // theme.breakpoints.up('sm')
+                  md: '2em', // theme.breakpoints.up('md')
+                  lg: '2.5em', // theme.breakpoints.up('lg')
+                  xl: '3em', // theme.breakpoints.up('xl')
+                },
+              }}
+            >
+              interactive and visual artist.
             </Typography>
             <Button variant='outlined' size='large' sx={{
               color: 'white',
@@ -66,7 +82,9 @@ function WelcomeScreen() {
               },
               m:3,
               borderWidth: 2, 
-            }}>Enter</Button>
+            }}
+            onClick={() => setWelcome(false)}
+            >Enter</Button>
         </Grid>
       </Grid>
     </div>
