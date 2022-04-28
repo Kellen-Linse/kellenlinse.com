@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Home from './Home/Home';
-import WelcomeScreen from './WelcomeScreen/WelcomeScreen';
+import Home from './Pages/Home/Home';
+import WelcomeScreen from './Pages/WelcomeScreen/WelcomeScreen';
 
 function Main({ lightObj }) {
   // Holds state of welcome screen

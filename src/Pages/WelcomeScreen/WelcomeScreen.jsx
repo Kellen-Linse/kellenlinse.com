@@ -3,7 +3,7 @@ import React, { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 
-import particlesOptions from '../particles.json';
+import particlesOptions from './particles.json';
 
 function WelcomeScreen({setWelcome}) {
   const particlesInit = useCallback((main) => {
