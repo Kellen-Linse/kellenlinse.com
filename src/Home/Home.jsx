@@ -3,10 +3,10 @@ import HeaderAppBar from './Components/HeaderAppBar';
 import HomeBody from './Components/HomeBody/HomeBody';
 
 
-function Home({lightObj}) {
+function Home({lightObj, setWelcome}) {
   return ( 
   <>
-    <HeaderAppBar lightObj={lightObj} position="fixed" />
+    <HeaderAppBar lightObj={lightObj} setWelcome={setWelcome} position="fixed" />
     <HomeBody />
     <Footer />
   </> 
