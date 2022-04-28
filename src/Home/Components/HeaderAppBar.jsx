@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-scroll';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -8,20 +9,32 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 
-export default function HeaderAppBar({lightObj}) {
+export default function HeaderAppBar({ lightObj, position }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{borderBottom: "3px solid #00e676"}}>
+      <AppBar position={position} style={{ borderBottom: '3px solid #00e676' }}>
         <Toolbar>
           <DeveloperBoardIcon />
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, ml: 2 }}>
+          <Typography variant='h5' component='div' sx={{ flexGrow: 1, ml: 2 }}>
             Kellen Linse
           </Typography>
-          <Button color="inherit">Projects</Button>
-          <Button color="inherit">Resume</Button>
-          <Button color="inherit">Contact</Button>
-          <Button onClick={() => lightObj.setLight(!lightObj.light)} color="inherit">
-            {lightObj.light ? <DarkModeIcon /> : <LightModeIcon /> }
+          <Link to='top' spy={true} smooth={true}>
+            <Button color='inherit'>About</Button>
+          </Link>
+          <Link to='projects' offset={-70} spy={true} smooth={true}>
+            <Button color='inherit'>Projects</Button>
+          </Link>
+          <Link to='resume' offset={-70} spy={true} smooth={true}>
+            <Button color='inherit'>Resume</Button>
+          </Link>
+          <Link to='contact' offset={-70} spy={true} smooth={true}>
+            <Button color='inherit'>Contact</Button>
+          </Link>
+          <Button
+            onClick={() => lightObj.setLight(!lightObj.light)}
+            color='inherit'
+          >
+            {lightObj.light ? <DarkModeIcon /> : <LightModeIcon />}
           </Button>
         </Toolbar>
       </AppBar>
