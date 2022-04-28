@@ -1,7 +1,9 @@
+import { useState } from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Main from './Main';
-import { ThemeProvider } from '@mui/system';
 
-export const theme = {
+export const darkTheme = createTheme({
   palette: {
     type: 'dark',
     primary: {
@@ -10,11 +12,33 @@ export const theme = {
     secondary: {
       main: '#00e676',
     },
+    background: {
+      default: '#303030',
+      paper: '#424242',
+    },
   },
-};
+});
+
+export const lightTheme = createTheme({
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#26c6da',
+    },
+    secondary: {
+      main: '#00e676',
+    },
+  },
+});
 
 function App() {
-  return <Main />
+  const [light, setLight] = useState(false);
+  return (
+    <ThemeProvider theme={light ? lightTheme : darkTheme}>
+      <CssBaseline />
+      <Main lightObj={{setLight, light}} />
+    </ThemeProvider>
+  );
 }
 
 export default App;

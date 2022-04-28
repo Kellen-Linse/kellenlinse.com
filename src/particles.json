@@ -26,7 +26,7 @@
         "quantity": 10
       },
       "repulse": {
-        "distance": 100,
+        "distance": 150,
         "duration": 0.4
       },
       "grab": {

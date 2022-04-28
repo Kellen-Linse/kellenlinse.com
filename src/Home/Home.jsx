@@ -1,8 +1,12 @@
-function Home() {
+import HeaderAppBar from './Components/HeaderAppBar';
+
+
+function Home({lightObj}) {
   return ( 
-  <h1>
-    home
-  </h1> 
+  <>
+
+    <HeaderAppBar lightObj={lightObj} />
+  </> 
   );
 }
 
