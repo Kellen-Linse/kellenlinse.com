@@ -16,8 +16,8 @@ function Title({ title }) {
             textShadow: '1px 1px 2px rgba(0, 0, 0, .7)',
             fontSize: {
               xs: '2em', // theme.breakpoints.up('xs')
-              sm: '2em', // theme.breakpoints.up('sm')
-              md: '2em', // theme.breakpoints.up('md')
+              sm: '2.2em', // theme.breakpoints.up('sm')
+              md: '2.4em', // theme.breakpoints.up('md')
               lg: '2.5em', // theme.breakpoints.up('lg')
               xl: '3em', // theme.breakpoints.up('xl')
             },
@@ -31,7 +31,7 @@ function Title({ title }) {
         <Grid container>
           <Grid item xs={4} />
           <Grid item xs={4}>
-            <Grid container>
+            <Grid container sx={{pb: 4}}>
               <Grid item xs={1} md={4} lg={4} xl={4}/>
               <Grid item xs={10} md={4} lg={4} xl={4} >
                 <Paper style={{ backgroundColor: '#00e676', height: '3px' }} />
