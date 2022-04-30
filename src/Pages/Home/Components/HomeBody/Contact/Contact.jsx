@@ -1,26 +1,26 @@
 import { Grid, Paper } from '@mui/material';
 import Title from '../../Shared_Components/Title';
+import ContactForm from './Components/ContactForm'
 
 const styles = {
   imgPaper: {
-    height: 500,
+    pb: 5,
+    pt: 2
   },
 };
 
 function Contact() {
   return (
-    <Paper id='contact' elevation={0} style={styles.imgPaper}>
+    <Paper id='contact' elevation={0} sx={styles.imgPaper}>
 
       <Grid container>
         <Grid item xs={12}>
           <Title title='Contact' />
         </Grid>
+        <Grid item container justifyContent='center' alignContent='center' xs={12}>
+          <ContactForm />
+        </Grid>
       </Grid>
-      <div style={{ color: 'white' }}>
-        
-        {/* <h1>This is About section</h1> */}
-        To Do: resize the background image...
-      </div>
     </Paper>
   );
 }
