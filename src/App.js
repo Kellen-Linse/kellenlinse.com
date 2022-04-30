@@ -19,6 +19,9 @@ export const darkTheme = createTheme({
     text: {
       primary: '#ffffff',
     },
+    Typography: {
+      fontFamily: 'Quicksand'
+    }
   },
 });
 

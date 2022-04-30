@@ -20,8 +20,6 @@ const styles = {
     backgroundSize: 'cover',
   },
   infoPaper: {
-    backgroundColor: 'grey',
-    color: 'white',
     textAlign: 'center',
     borderRadius: '20%',
     border: '5px solid #00e676',
@@ -58,13 +56,14 @@ function About() {
         >
           <Paper sx={{ m: 4 }} style={styles.infoPaper}>
             <Typography sx={{ m: 4 }} >
-              Kellen is a Seattle based IoT and Full Stack Software Developer,
-              with a keen interest in visual and interactive arts. His growth
-              mindset and constant curiosity have led him to develop a multitude
+                Welcome to my page!
+            </Typography>
+            <Typography sx={{ m: 4 }} >
+              I'm a Seattle based IoT and Full Stack Software Developer, and a interactive visual artist. My growth
+              mindset and constant curiosity have led me to develop a multitude
               of skills across several disciplines, including low voltage and
               vehicle electronics, programming and software development, basic
-              CAD design, 3D printing, circuit board design, circuit board
-              manufacturing, product design, and interactive art.
+              CAD design, 3D printing, circuit board design, and product design.
             </Typography>
           </Paper>
         </Grid>

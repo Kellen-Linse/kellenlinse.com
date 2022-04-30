@@ -18,20 +18,20 @@ export default function HeaderAppBar({ lightObj, position, setWelcome }) {
           <IconButton onClick={() => setWelcome(true)} sx={{ m: 0 }}>
             <DeveloperBoardIcon />
           </IconButton>
-          <Typography variant='h5' component='div' sx={{ flexGrow: 1, ml: 0 }}>
+          <Typography variant='h5' component='div' sx={{ flexGrow: 1, ml: 0, fontFamily: 'IBM Plex Mono'}}>
             Kellen Linse
           </Typography>
           <Link to='top' spy={true} smooth={true}>
-            <Button color='inherit'>About</Button>
+            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono'}}>About</Button>
           </Link>
           <Link to='projects' offset={-70} spy={true} smooth={true}>
-            <Button color='inherit'>Projects</Button>
+            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono'}}>Projects</Button>
           </Link>
           <Link to='resume' offset={-70} spy={true} smooth={true}>
-            <Button color='inherit'>Resume</Button>
+            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono'}}>Resume</Button>
           </Link>
           <Link to='contact' offset={-70} spy={true} smooth={true}>
-            <Button color='inherit'>Contact</Button>
+            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono'}}>Contact</Button>
           </Link>
           <Button
             onClick={() => lightObj.setLight(!lightObj.light)}

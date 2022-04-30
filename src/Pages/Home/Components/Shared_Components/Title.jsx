@@ -10,6 +10,7 @@ function Title({ title }) {
               xs: 2,
               m: 1,
             },
+            fontFamily: 'IBM Plex Mono',
             color: '#00e676',
             textAlign: 'center',
             fontWeight: '400',
