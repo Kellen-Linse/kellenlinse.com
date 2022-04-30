@@ -1,7 +1,9 @@
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
 import { TextField, Button, Paper, Typography, Grid } from '@mui/material';
 import React, { useState } from 'react';
+
 import WarningModal from './WarningModal';
+import env from 'react-dotenv';
 
 const formStyles = {
   formPaper: {
@@ -23,7 +25,7 @@ const formStyles = {
   },
 };
 
-const Contact = () => {
+const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -36,36 +38,41 @@ const Contact = () => {
 
   const isValidEmail = (email) => {
     const regex =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(String(email).toLowerCase());
   };
 
   const submit = () => {
+    // check that all input fields are filled in
     if (name && email && message) {
-
-      if(! isValidEmail(email)){
+      // check for valid email
+      if (!isValidEmail(email)) {
         setValidEmail(false);
         return;
+      } else {
+        setValidEmail(true);
       }
 
-      const serviceId = 'service_v3u7lkn';
-      const templateId = 'template_x2cc5sf';
-      const pubKey = 'DqIUDFNQsc8F88Oxv';
+      // Set parameters for email
       const templateParams = {
-          name,
-          email,
-          message
+        name,
+        email,
+        message,
       };
 
-      emailjs.send(serviceId, templateId, templateParams, pubKey)
-          .then(response => console.log(response))
-          .catch(error => console.log(error));
+      // Send email with message
+      emailjs
+        .send(env.SERVICE_ID, env.TEMPLATE_ID, templateParams, env.PUB_KEY)
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error));
 
+      // Reset state
       setName('');
       setEmail('');
       setMessage('');
       setEmailSent(true);
     } else {
+      // Open warning model if all inputs are not filled out.
       handleInputOpen();
     }
   };
@@ -106,7 +113,6 @@ const Contact = () => {
         >
           <TextField
             error={!validEmail}
-            
             label='Your Email Address'
             variant='outlined'
             color='secondary'
@@ -165,9 +171,13 @@ const Contact = () => {
           </Typography>
         </Grid>
       </Grid>
-      <WarningModal openModal={openInputModal} handleClose={handleInputClose} text='Please fill in all fields.'/>
+      <WarningModal
+        openModal={openInputModal}
+        handleClose={handleInputClose}
+        text='Please fill in all fields.'
+      />
     </Paper>
   );
 };
 
-export default Contact;
+export default ContactForm;

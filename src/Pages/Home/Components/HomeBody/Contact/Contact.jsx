@@ -1,6 +1,6 @@
 import { Grid, Paper } from '@mui/material';
 import Title from '../../Shared_Components/Title';
-import ContactForm from './Components/ContactForm'
+import ContactForm from './Components/ContactForm';
 
 const styles = {
   imgPaper: {
@@ -12,7 +12,6 @@ const styles = {
 function Contact() {
   return (
     <Paper id='contact' elevation={0} sx={styles.imgPaper}>
-
       <Grid container>
         <Grid item xs={12}>
           <Title title='Contact' />
