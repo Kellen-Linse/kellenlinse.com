@@ -9,7 +9,7 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 export default function ProjectCard({title, desc, img}) {
 
   return (
-    <Card sx={{ width: 345, mb: 5}}>
+    <Card raised sx={{ width: 345, mb: 5}}>
       <CardActionArea>
         <CardMedia
           component="img"
