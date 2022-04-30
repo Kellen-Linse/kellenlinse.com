@@ -1,5 +1,5 @@
-import Footer from './Components/Footer';
-import HeaderAppBar from './Components/HeaderAppBar';
+import Footer from './Components/HomeBody/Footer/Footer';
+import HeaderAppBar from './Components/AppBar/HeaderAppBar';
 import HomeBody from './Components/HomeBody/HomeBody';
 
 

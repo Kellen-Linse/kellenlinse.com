@@ -7,7 +7,6 @@ import profileImage from '../images/Profile_Large.jpg';
 const styles = {
   bgPaper: {
     backgroundImage: `url(${bgImage})`,
-    height: 560,
     backgroundSize: 'cover',
   },
   imgPaper: {
@@ -42,6 +41,7 @@ function About() {
           alignItems='center'
           xs={12}
           md={6}
+          p={5}
         >
           <Paper id='about' elevation={0} style={styles.imgPaper} />
         </Grid>
@@ -59,7 +59,7 @@ function About() {
                 Welcome to my page!
             </Typography>
             <Typography sx={{ m: 4 }} >
-              I'm a Seattle based IoT and Full Stack Software Developer, and a interactive visual artist. My growth
+              I'm a Seattle based IoT and Full Stack Software Developer, and an interactive visual artist. My growth
               mindset and constant curiosity have led me to develop a multitude
               of skills across several disciplines, including low voltage and
               vehicle electronics, programming and software development, basic

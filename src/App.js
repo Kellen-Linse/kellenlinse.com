@@ -2,6 +2,7 @@ import { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Main from './Main';
+import {Typography} from '@mui/material'
 
 export const darkTheme = createTheme({
   palette: {
@@ -29,10 +30,10 @@ export const lightTheme = createTheme({
   palette: {
     type: 'light',
     primary: {
-      main: '#26c6da',
+      main: '#00e676',
     },
     secondary: {
-      main: '#00e676',
+      main: '#26c6da',
     },
     text: {
       primary: 'rgba(0,0,0,0.87)',

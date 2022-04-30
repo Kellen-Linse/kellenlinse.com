@@ -4,6 +4,7 @@ import Title from '../../Shared_Components/Title';
 const styles = {
   imgPaper: {
     height: 500,
+    backgroundColor: '#26C6DA'
   },
 };
 
