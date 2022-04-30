@@ -1,6 +1,7 @@
 import emailjs from 'emailjs-com'
 import { TextField, Button, Paper, Typography, Grid } from '@mui/material';
 import React, { useState } from 'react';
+import WarningModal from './WarningModal';
 
 const formStyles = {
   formPaper: {
@@ -27,6 +28,11 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [emailSent, setEmailSent] = useState(false);
+  const [validEmail, setValidEmail] = useState(true);
+  const [openInputModal, setOpenInputModal] = useState(false);
+
+  const handleInputOpen = () => setOpenInputModal(true);
+  const handleInputClose = () => setOpenInputModal(false);
 
   const isValidEmail = (email) => {
     const regex =
@@ -35,11 +41,13 @@ const Contact = () => {
   };
 
   const submit = () => {
-    if(! isValidEmail(email)){
-      alert('Please input valid email.'); // <-------------- Change to modal or popout
-      return;
-    }
     if (name && email && message) {
+
+      if(! isValidEmail(email)){
+        setValidEmail(false);
+        return;
+      }
+
       const serviceId = 'service_v3u7lkn';
       const templateId = 'template_x2cc5sf';
       const pubKey = 'DqIUDFNQsc8F88Oxv';
@@ -51,14 +59,14 @@ const Contact = () => {
 
       emailjs.send(serviceId, templateId, templateParams, pubKey)
           .then(response => console.log(response))
-          .then(error => console.log(error));
+          .catch(error => console.log(error));
 
       setName('');
       setEmail('');
       setMessage('');
       setEmailSent(true);
     } else {
-      alert('Please fill in all fields.'); // <-------------- Change to modal or popout
+      handleInputOpen();
     }
   };
 
@@ -97,6 +105,8 @@ const Contact = () => {
           direction='column'
         >
           <TextField
+            error={!validEmail}
+            
             label='Your Email Address'
             variant='outlined'
             color='secondary'
@@ -155,6 +165,7 @@ const Contact = () => {
           </Typography>
         </Grid>
       </Grid>
+      <WarningModal openModal={openInputModal} handleClose={handleInputClose} text='Please fill in all fields.'/>
     </Paper>
   );
 };
