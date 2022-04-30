@@ -85,7 +85,10 @@ const ContactForm = () => {
       sx={{ m: 2 }}
     >
       <Grid container>
+      <Grid
+          container sx={{mx: 3}}>
         <Grid
+        sx={{pr: {sm: 1}}}
           container
           item
           sm={6}
@@ -94,6 +97,7 @@ const ContactForm = () => {
           direction='column'
         >
           <TextField
+            fullWidth
             label='Your Name'
             variant='outlined'
             color='secondary'
@@ -104,6 +108,7 @@ const ContactForm = () => {
           />
         </Grid>
         <Grid
+          sx={{pl: {sm: 1}}}
           container
           item
           sm={6}
@@ -112,6 +117,7 @@ const ContactForm = () => {
           direction='column'
         >
           <TextField
+            fullWidth
             error={!validEmail}
             label='Your Email Address'
             variant='outlined'
@@ -122,11 +128,12 @@ const ContactForm = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </Grid>
+          </Grid>
         <Grid
           container
           item
           sm={12}
-          sx={{ mx: 3 }}
+          sx={{ mx: 3, my: 2 }}
           justifyContent='center'
           alignContent='center'
           direction='column'
@@ -148,9 +155,9 @@ const ContactForm = () => {
           container
           item
           sm={12}
-          sx={{ mx: 1, my: 2 }}
-          justifyContent='center'
-          alignContent='center'
+          sx={{ mx: 3, my: 2 }}
+          justifyContent='end'
+          alignContent='end'
           direction='column'
         >
           <Button variant='outlined' onClick={submit}>
