@@ -1,15 +1,24 @@
 import { React, useState } from 'react';
+import { saveAs } from "file-saver";
 import { Card, CardActions, CardMedia, Button } from '@mui/material';
 import resImg from '../../images/res.JPG';
 import PDF_Modal from './PDF_Modal';
+import resPDF from '../Resume.pdf'
 
 export default function ResumeCard() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const saveFile = () => {
+    saveAs(
+      resPDF,
+      "Kellen_Linse_Resume.pdf"
+    );
+  };
+
   return (
-    <Card raised sx={{ maxWidth: 350, border: '2px solid #00e676' }}>
+    <Card raised sx={{ mt: 3, maxWidth: {xs: 350, md: 500}, border: '2px solid #00e676' }}>
       <CardMedia
         sx={{ borderBottom: '3px solid #00e676' }}
         component='img'
@@ -19,7 +28,7 @@ export default function ResumeCard() {
       />
       <CardActions sx={{ display: 'flex', justifyContent: 'end', p: 2 }}>
         <Button onClick={() => handleOpen()} variant='outlined'>View</Button>
-        <Button variant='outlined'>Download</Button>
+        <Button onClick={() => saveFile()} variant='outlined'>Download</Button>
       </CardActions>
       <PDF_Modal open={open} handleClose={handleClose} />
     </Card>
