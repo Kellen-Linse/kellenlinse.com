@@ -26,27 +26,22 @@ export default function PDF_Modal({open, handleClose}) {
 
   
   function adjustWidth(width){
-    console.log('WIDTH:', width)
     let adjWidth;
+
     if(width < 500){
-      console.log("HHHHHHH")
       adjWidth = 350;
     } else if (width < 650){
-      console.log("AAAAAAAA")
       adjWidth = 500;
     } else if (width < 800){
-      console.log("AAAAAAAA")
       adjWidth = 600;
     }
-    console.log('ADJ WIDTH:', adjWidth)
+    
     return adjWidth;
   }
 
   const width = adjustWidth(useWindowWidth());
 
   return (
-    <>
-    {console.log(width)}
       <Modal
         open={open}
         onClose={handleClose}
@@ -66,6 +61,5 @@ export default function PDF_Modal({open, handleClose}) {
         </Grid>
         </Box>
       </Modal>
-    </>
   );
 }

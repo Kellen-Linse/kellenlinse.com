@@ -41,7 +41,6 @@ function About() {
           alignItems='center'
           xs={12}
           md={6}
-          p={5}
         >
           <Paper id='about' elevation={0} style={styles.imgPaper} />
         </Grid>
