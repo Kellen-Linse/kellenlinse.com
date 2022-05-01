@@ -36,10 +36,10 @@ function Projects() {
     <Paper id='projects' elevation={0} style={styles.imgPaper}>
 
       <Grid container>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{mt: 3}}>
           <Title title='Projects' />
         </Grid>
-        <Grid item container justifyContent='center' alignContent='center' spacing={3} xs={12}>
+        <Grid item container justifyContent='center' alignContent='center' sx={{mb: 4, mt: 2}} spacing={3} xs={12}>
           <Grid item container justifyContent='center' alignContent='center' xs={12} md={6} lg={4}>
             <ProjectCard title={cardInfo[0].title} desc={cardInfo[0].desc} img={cardInfo[0].img}></ProjectCard>
           </Grid>
