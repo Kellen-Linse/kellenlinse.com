@@ -1,5 +1,6 @@
 import { Grid, Paper } from '@mui/material';
 import Title from '../../Shared_Components/Title';
+import ResumeCard from './components/ResumeCard';
 
 const styles = {
   imgPaper: {
@@ -9,6 +10,7 @@ const styles = {
 };
 
 function Resume() {
+
   return (
     <Paper id='resume' elevation={0} style={styles.imgPaper}>
 
@@ -16,12 +18,10 @@ function Resume() {
         <Grid item xs={12}>
           <Title title='Resume' />
         </Grid>
+        <Grid item container justifyContent='center' alignContent='center' xs={12}>
+        <ResumeCard />
+        </Grid>
       </Grid>
-      <div style={{ color: 'white' }}>
-        
-        {/* <h1>This is About section</h1> */}
-        To Do: resize the background image...
-      </div>
     </Paper>
   );
 }
