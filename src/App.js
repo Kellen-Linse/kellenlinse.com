@@ -2,6 +2,7 @@ import { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Main from './Main';
+import {Typography} from '@mui/material'
 
 export const darkTheme = createTheme({
   palette: {
@@ -11,6 +12,9 @@ export const darkTheme = createTheme({
     },
     secondary: {
       main: '#00e676',
+    },
+    iconColor:{
+      main: 'rgba(0,0,0,0.87)',
     },
     background: {
       default: '#303030',
@@ -34,11 +38,15 @@ export const lightTheme = createTheme({
     secondary: {
       main: '#26c6da',
     },
+    iconColor:{
+      main: '#ffffff',
+    },
     text: {
       primary: 'rgba(0,0,0,0.87)',
     },
   },
 });
+
 
 function App() {
   const [light, setLight] = useState(false);
