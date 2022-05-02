@@ -26,8 +26,8 @@ export default function ProjectCard({title, desc, img}) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
+      <CardActions sx={{ display: 'flex', justifyContent: 'end', p: 2 }}>
+        <Button color="primary" variant='contained' sx={{color: 'text.secondary'}}>
           Learn More
         </Button>
       </CardActions>

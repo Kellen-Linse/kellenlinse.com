@@ -21,6 +21,7 @@ export const darkTheme = createTheme({
     },
     text: {
       primary: '#ffffff',
+      secondary: 'rgba(0,0,0,0.87)',
     },
     Typography: {
       fontFamily: 'Quicksand'
@@ -42,6 +43,7 @@ export const lightTheme = createTheme({
     },
     text: {
       primary: 'rgba(0,0,0,0.87)',
+      secondary: '#ffffff',
     },
   },
 });

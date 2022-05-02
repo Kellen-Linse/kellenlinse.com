@@ -160,7 +160,7 @@ const ContactForm = () => {
           alignContent='end'
           direction='column'
         >
-          <Button variant='outlined' onClick={submit}>
+          <Button variant='contained' sx={{color: 'text.secondary'}} onClick={submit}>
             Send Message
           </Button>
         </Grid>
