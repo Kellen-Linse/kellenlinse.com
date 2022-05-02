@@ -2,7 +2,6 @@ import { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Main from './Main';
-import {Typography} from '@mui/material'
 
 export const darkTheme = createTheme({
   palette: {

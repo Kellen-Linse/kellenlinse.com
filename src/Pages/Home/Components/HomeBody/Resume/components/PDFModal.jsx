@@ -15,7 +15,7 @@ const style = {
   p: 4,
 };
 
-export default function PDF_Modal({open, handleClose}) {
+export default function PDFModal({open, handleClose}) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 

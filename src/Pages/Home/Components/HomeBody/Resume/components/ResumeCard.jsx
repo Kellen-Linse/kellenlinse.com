@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import { saveAs } from "file-saver";
 import { Card, CardActions, CardMedia, Button } from '@mui/material';
 import resImg from '../../images/res.JPG';
-import PDF_Modal from './PDF_Modal';
+import PDFModal from './PDFModal';
 import resPDF from '../Resume.pdf'
 
 export default function ResumeCard() {
@@ -30,7 +30,7 @@ export default function ResumeCard() {
         <Button onClick={() => handleOpen()} variant='outlined'>View</Button>
         <Button onClick={() => saveFile()} variant='outlined'>Download</Button>
       </CardActions>
-      <PDF_Modal open={open} handleClose={handleClose} />
+      <PDFModal open={open} handleClose={handleClose} />
     </Card>
   );
 }
