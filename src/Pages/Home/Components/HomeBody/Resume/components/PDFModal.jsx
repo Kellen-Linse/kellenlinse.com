@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { useWindowWidth } from '@wojtekmaj/react-hooks';
 import {Box, Button, Grid, Modal,  } from '@mui/material';
@@ -16,14 +16,6 @@ const style = {
 };
 
 export default function PDFModal({open, handleClose}) {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
-
   
   function adjustWidth(width){
     let adjWidth;
@@ -51,10 +43,8 @@ export default function PDFModal({open, handleClose}) {
         <Box sx={style}>
           <Document
             file={pdf}
-            onLoadError={console.error}
-            onLoadSuccess={onDocumentLoadSuccess}
           >
-            <Page renderMode='svg' renderAnnotationLayer={false} width={width} pageNumber={pageNumber}/>
+            <Page renderMode='svg' renderAnnotationLayer={false} width={width} pageNumber={1}/>
           </Document>
         <Grid container item xs={12} justifyContent="end">
         <Button variant='outlined' sx={{mt: 2, mr: 2}} onClick={()=> handleClose()}>Close</Button>

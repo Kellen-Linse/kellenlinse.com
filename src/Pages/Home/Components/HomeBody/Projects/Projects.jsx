@@ -2,10 +2,8 @@ import { Grid, Paper } from '@mui/material';
 import Title from '../../Shared_Components/Title';
 import ProjectCard from './Components/ProjectCard';
 
-// Import images
-import webDevImg from '../images/birb.jpg';
-import IoTImg from '../images/circuit_board_cropped.jpg';
-import artImg from '../images/artImg.JPG';
+//Import Project info
+import projectInfo from '../projectInfo/projectInfo.js';
 
 const styles = {
   imgPaper: {
@@ -13,23 +11,6 @@ const styles = {
   },
 };
 
-let cardInfo = [
-  {
-    title: 'Web and Mobile Development',
-    desc: 'Full Stack and Mobile App Development Projects',
-    img: webDevImg,
-  },
-  {
-    title: 'IoT',
-    desc: 'Internet of Things and Embedded Systems Projects',
-    img: IoTImg,
-  },
-  {
-    title: 'Visual Art',
-    desc: 'Visual and Interactive Arts Projects',
-    img: artImg,
-  },
-];
 
 function Projects() {
   return (
@@ -47,7 +28,7 @@ function Projects() {
           spacing={3}
           xs={12}
         >
-          {cardInfo.map((card) => {
+          {projectInfo.map((card) => {
             return (
               <Grid
                 item
@@ -57,11 +38,10 @@ function Projects() {
                 xs={12}
                 md={6}
                 lg={4}
+                key={card.title}
               >
                 <ProjectCard
-                  title={card.title}
-                  desc={card.desc}
-                  img={card.img}
+                  card={card}
                 ></ProjectCard>
               </Grid>
             );
