@@ -1,5 +1,4 @@
 import { Button, Grid, Paper, Box, Typography, Modal } from '@mui/material';
-import ProjectCarousel from './ProjectCarousel';
 
 const style = {
   position: 'absolute',
