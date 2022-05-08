@@ -136,22 +136,22 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
           }}
         >
           <Link to='top' spy={true} smooth={true}>
-            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono' }}>
+            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               About
             </Button>
           </Link>
           <Link to='projects' offset={-70} spy={true} smooth={true}>
-            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono' }}>
+            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               Projects
             </Button>
           </Link>
           <Link to='resume' offset={-70} spy={true} smooth={true}>
-            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono' }}>
+            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               Resume
             </Button>
           </Link>
           <Link to='contact' offset={-70} spy={true} smooth={true}>
-            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono' }}>
+            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               Contact
             </Button>
           </Link>
