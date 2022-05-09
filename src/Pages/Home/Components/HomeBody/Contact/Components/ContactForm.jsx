@@ -8,7 +8,7 @@ import env from 'react-dotenv';
 const formStyles = {
   formPaper: {
     maxWidth: 500,
-    border: '2px solid #26c6da',
+    border: '3px solid #26c6da',
     m: {xs: 1, md: 5}, 
     mt: '500px',
     p:3

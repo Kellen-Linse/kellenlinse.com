@@ -14,7 +14,7 @@ function Footer() {
       display: 'flex',
     },
     upPaper: {
-      width: 50,
+      width: 80,
       height: 50,
       display: 'flex',
       position: 'relative',
@@ -22,8 +22,8 @@ function Footer() {
       backgroundColor: '#26c6da',
     },
     iconPaper: {
-      width: 50,
-      height: 50,
+      width: 80,
+      height: 80,
       display: 'flex',
       backgroundColor: '#26c6da',
       mx: 1,
@@ -31,7 +31,7 @@ function Footer() {
   };
 
   return (
-    <Paper id='footer' sx={paperStyles.bgPaper}>
+    <>
       <Grid container>
         <Grid
           container
@@ -91,11 +91,11 @@ function Footer() {
             justifyContent='center'
             alignItems='center'
           >
-            <Typography sx={{mb: 2}}>Made by Kellen Linse &copy; 2022</Typography>
+            <Typography color='white' sx={{mb: 4, mt: 3}}>Made by Kellen Linse &copy; 2022</Typography>
           </Grid>
         </Grid>
       </Grid>
-    </Paper>
+    </>
   );
 }
 

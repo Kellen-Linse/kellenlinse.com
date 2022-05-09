@@ -1,28 +1,21 @@
-import { Grid, Paper } from '@mui/material';
+import { Stack } from '@mui/material';
+import { Box } from '@mui/system';
 import Title from '../../Shared_Components/Title';
 import ResumeCard from './components/ResumeCard';
 
-const styles = {
-  imgPaper: {
-    height: 600,
-    backgroundColor: '#26C6DA'
-  },
-};
-
 function Resume() {
-
   return (
-    <Paper id='resume' elevation={0} sx={styles.imgPaper}>
-
-      <Grid container>
-        <Grid item xs={12} sx={{m: 5}}>
-          <Title title='Resume' />
-        </Grid>
-        <Grid item container justifyContent='center' alignContent='center' xs={12}>
+    <Box sx={{ height: 800 }}>
+      <Stack
+       sx={{ height: '100%' }}
+        id='resume'
+        direction='column'
+        alignItems='center'
+      >
+        <Title title='Resume' />
         <ResumeCard />
-        </Grid>
-      </Grid>
-    </Paper>
+      </Stack>
+    </Box>
   );
 }
 

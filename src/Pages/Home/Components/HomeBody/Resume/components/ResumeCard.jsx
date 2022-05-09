@@ -18,12 +18,12 @@ export default function ResumeCard() {
   };
 
   return (
-    <Card raised sx={{ mt: 3, maxWidth: {xs: 350, md: 500}, border: '2px solid #00e676' }}>
+    <Card raised sx={{ m: 14, maxWidth: {xs: 350, md: 600}, border: '3px solid #00e676' }}>
       <CardMedia
         sx={{ borderBottom: '3px solid #00e676' }}
         component='img'
         alt='resume image'
-        height='200'
+        height='250'
         image={resImg}
       />
       <CardActions sx={{ display: 'flex', justifyContent: 'end', p: 2 }}>
