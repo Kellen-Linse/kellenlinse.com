@@ -84,6 +84,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
           >
             <Link to='top' spy={true} smooth={true}>
               <Button
+                onClick={() => handleCloseNavMenu()}
                 color='inherit'
                 sx={{ fontFamily: 'IBM Plex Mono', px: 3 }}
               >
@@ -92,6 +93,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             </Link>
             <Link to='projects' offset={-70} spy={true} smooth={true}>
               <Button
+                onClick={() => handleCloseNavMenu()}
                 color='inherit'
                 sx={{ fontFamily: 'IBM Plex Mono', px: 3 }}
               >
@@ -100,6 +102,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             </Link>
             <Link to='resume' offset={-70} spy={true} smooth={true}>
               <Button
+                onClick={() => handleCloseNavMenu()}
                 color='inherit'
                 sx={{ fontFamily: 'IBM Plex Mono', px: 3 }}
               >
@@ -108,6 +111,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             </Link>
             <Link to='contact' offset={-70} spy={true} smooth={true}>
               <Button
+                onClick={() => handleCloseNavMenu()}
                 color='inherit'
                 sx={{ fontFamily: 'IBM Plex Mono', px: 3 }}
               >
@@ -116,7 +120,10 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             </Link>
             <Divider sx={{ mt: 1}} />
             <Button
-              onClick={() => lightObj.setLight(!lightObj.light)}
+              onClick={() => {
+                lightObj.setLight(!lightObj.light); 
+                handleCloseNavMenu();
+              }}
               color='secondary'
               variant='outlined'
               sx={{
