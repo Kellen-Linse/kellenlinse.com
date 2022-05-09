@@ -34,7 +34,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
   return (
     <AppBar
       position='fixed'
-      sx={{ borderBottom: 3, borderColor: 'secondary.main' }}
+      sx={{ borderBottom: 3, borderColor: 'secondary.main', fontSize: '1.3em' }}
     >
       <Toolbar>
         <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>

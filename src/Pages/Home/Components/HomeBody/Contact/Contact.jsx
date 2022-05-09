@@ -1,6 +1,9 @@
-import { Grid, Paper } from '@mui/material';
+import { Paper, Grid, IconButton, Link } from '@mui/material';
 import Title from '../../Shared_Components/Title';
 import ContactForm from './Components/ContactForm';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const styles = {
   imgPaper: {
@@ -8,6 +11,13 @@ const styles = {
     pt: 2, 
     height: {sm: '1000px'}
   },
+  iconPaper: {
+    width: 80,
+    height: 80,
+    display: 'flex',
+    backgroundColor: '#26c6da',
+    mx: 4,
+  }
 };
 
 function Contact() {
@@ -19,6 +29,41 @@ function Contact() {
         </Grid>
         <Grid item container justifyContent='center' alignContent='center' xs={12} sx={{my: 5}}>
           <ContactForm />
+          <Grid
+          container
+          item
+          justifyContent='center'
+          alignItems='start'
+          sx={{ mt: 4 }}
+        >
+          <Paper sx={styles.iconPaper}>
+            <Grid container item justifyContent='center' alignItems='center'>
+              <Link href='https://www.linkedin.com/in/kellen-linse/'>
+                <IconButton color='iconColor'>
+                  <LinkedInIcon fontSize='large' />
+                </IconButton>
+              </Link>
+            </Grid>
+          </Paper>
+          <Paper sx={styles.iconPaper}>
+            <Grid container item justifyContent='center' alignItems='center'>
+              <Link href='https://github.com/Kellen-Linse'>
+                <IconButton color='iconColor'>
+                  <GitHubIcon fontSize='large' />
+                </IconButton>
+              </Link>
+            </Grid>
+          </Paper>
+          <Paper sx={styles.iconPaper}>
+            <Grid container item justifyContent='center' alignItems='center'>
+              <Link href='https://mailto:kellen.linse@gmail.com'>
+                <IconButton color='iconColor'>
+                  <MailOutlineIcon fontSize='large' />
+                </IconButton>
+              </Link>
+            </Grid>
+          </Paper>
+        </Grid>
         </Grid>
       </Grid>
     </Paper>
