@@ -8,7 +8,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 function Footer() {
   const paperStyles = {
     bgPaper: {
-      height: 180,
+      height: 230,
       color: 'white',
       backgroundColor: 'black',
       display: 'flex',

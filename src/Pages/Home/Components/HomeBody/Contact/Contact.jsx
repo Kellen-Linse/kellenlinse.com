@@ -5,7 +5,8 @@ import ContactForm from './Components/ContactForm';
 const styles = {
   imgPaper: {
     pb: 5,
-    pt: 2
+    pt: 2, 
+    height: {sm: '1000px'}
   },
 };
 

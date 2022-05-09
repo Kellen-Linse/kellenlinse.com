@@ -9,6 +9,9 @@ const formStyles = {
   formPaper: {
     maxWidth: 500,
     border: '2px solid #26c6da',
+    m: {xs: 1, md: 5}, 
+    mt: '500px',
+    p:3
   },
   inputFormsSX: {
     mx: 3,
@@ -81,8 +84,7 @@ const ContactForm = () => {
     <Paper
       id='contact-form'
       elevation={6}
-      style={formStyles.formPaper}
-      sx={{ m: {xs: 1, md: 5}, p:3 }}
+      sx={formStyles.formPaper}
     >
       <Grid container>
       <Grid
@@ -155,7 +157,7 @@ const ContactForm = () => {
           container
           item
           sm={12}
-          sx={{ mx: 3, mt: 2 }}
+          sx={{ mx: 3, my: 2 }}
           justifyContent='end'
           alignContent='end'
           direction='column'
@@ -168,7 +170,7 @@ const ContactForm = () => {
           container
           item
           sm={12}
-          sx={{ mx: 1, mb: 2, textAlign: 'center' }}
+          sx={{ mx: 1, mb: 1, mt: 2, textAlign: 'center' }}
           justifyContent='center'
           alignContent='center'
           direction='column'

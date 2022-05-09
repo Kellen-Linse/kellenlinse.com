@@ -15,6 +15,8 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 
+
+
 import './active.css';
 
 
@@ -146,22 +148,22 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             alignItems: 'center'
           }}
         >
-          <Link activeClass="active" to='top' spy={true} smooth={true}>
+          <Link isDynamic activeClass="active" to='top' spy={true} smooth={true}>
             <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               About
             </Button>
           </Link>
-          <Link activeClass="active" to='projects' offset={-68} spy={true} smooth={true}>
+          <Link isDynamic activeClass="active" to='projects' offset={-70} spy={true} smooth={true}>
             <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               Projects
             </Button>
           </Link>
-          <Link activeClass="active" to='resume' offset={-68} spy={true} smooth={true}>
+          <Link isDynamic activeClass="active" to='resume' offset={-70} spy={true} smooth={true}>
             <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               Resume
             </Button>
           </Link>
-          <Link activeClass="active" to='contact' offset={-68} spy={true} smooth={true}>
+          <Link isDynamic activeClass="active" to='contact' offset={-70} spy={true} smooth={true}>
             <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               Contact
             </Button>
