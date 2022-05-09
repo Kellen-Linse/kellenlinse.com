@@ -15,7 +15,7 @@ function Contact() {
     <Paper id='contact' elevation={0} sx={styles.imgPaper}>
       <Grid container>
         <Grid item xs={12}>
-          <Title title='Contact' />
+          <Title title='<Contact />' txtColor='secondary.main'/>
         </Grid>
         <Grid item container justifyContent='center' alignContent='center' xs={12} sx={{my: 5}}>
           <ContactForm />

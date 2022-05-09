@@ -12,7 +12,7 @@ function Resume() {
         direction='column'
         alignItems='center'
       >
-        <Title title='Resume' />
+        <Title title='<Resume />' txtColor='primary.main'/>
         <ResumeCard />
       </Stack>
     </Box>

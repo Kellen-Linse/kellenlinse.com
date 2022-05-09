@@ -17,7 +17,7 @@ function Projects() {
     <Paper id='projects' elevation={0} style={styles.imgPaper}>
       <Grid container>
         <Grid item xs={12} sx={{ mt: 3 }}>
-          <Title title='Projects' />
+          <Title title='<Projects />' txtColor='secondary.main'/>
         </Grid>
         <Grid
           item

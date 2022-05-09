@@ -1,62 +1,47 @@
-import { Grid, Paper, Stack } from '@mui/material';
+import { Grid, Stack } from '@mui/material';
 import Title from '../../Shared_Components/Title';
-import profileImage from '../images/Profile_Large.jpg';
 import Bio from './Components/Bio';
-
-const styles = {
-  bgPaper: {
-    backgroundColor: 'black',
-    backgroundSize: 'cover',
-    minHeight: '800px',
-  },
-  imgPaper: {
-    backgroundImage: `url(${profileImage})`,
-    height: 300,
-    width: 300,
-    borderRadius: '50%',
-    margin: '28px',
-    backgroundSize: 'cover',
-  },
-};
+import Headshot from './Components/Headshot';
 
 function About() {
-
-
-
   return (
-      <><Grid container>
-          <Grid id='about' item xs={ 12 }>
-            <Title title='ABOUT' />
-          </Grid>
-          <Grid
-            item
-            container
-            direction='column'
-            justifyContent='center'
-            alignItems='center'
-            xs={ 12 }
-            md={ 6 }
-          >
-            <Stack
-              direction='column'
-              justifyContent='center'
-              alignItems='center'
-              spacing={ 2 }
-            >
-              <Paper  elevation={ 0 } style={ styles.imgPaper } />
-              <Bio />
-            </Stack>
-          </Grid>
-          <Grid
-            item
-            container
-            direction='column'
-            justify='center'
-            alignItems='center'
-            xs={ 12 }
-            md={ 6 }
-          ></Grid>
-        </Grid></>
+    <Grid 
+      id='about' 
+      container 
+      minHeight={1000} 
+      alignItems='stretch'>
+      <Title title='<ABOUT />' txtColor='primary.main' />
+      <Grid
+        item
+        container
+        direction='column'
+        justifyContent='center'
+        alignItems='center'
+        height={'100%'}
+        xs={12}
+        md={6}
+        minHeight={900}
+      >
+        <Stack
+          height={'100%'}
+          direction='column'
+          justifyContent='space-between'
+          alignItems='center'
+        >
+          <Headshot />
+          <Bio />
+        </Stack>
+      </Grid>
+      <Grid
+        item
+        container
+        direction='column'
+        justify='center'
+        alignItems='center'
+        xs={12}
+        md={6}
+      ></Grid>
+    </Grid>
   );
 }
 
