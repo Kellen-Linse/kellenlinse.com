@@ -1,16 +1,10 @@
-import { Grid, Paper, Stack, Typography } from '@mui/material';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
-import { useCallback } from 'react';
-import particlesOptions from '../../../../WelcomeScreen/particles.json';
+import { Grid, Paper, Stack } from '@mui/material';
 import Title from '../../Shared_Components/Title';
-
-import bgImage from '../images/circuit_board_cropped.jpg';
 import profileImage from '../images/Profile_Large.jpg';
+import Bio from './Components/Bio';
 
 const styles = {
   bgPaper: {
-    // backgroundImage: `url(${bgImage})`,
     backgroundColor: 'black',
     backgroundSize: 'cover',
     minHeight: '800px',
@@ -23,22 +17,14 @@ const styles = {
     margin: '28px',
     backgroundSize: 'cover',
   },
-  infoPaper: {
-    textAlign: 'center',
-    borderRadius: '20%',
-    border: '5px solid #00e676',
-    maxWidth: '400px',
-  },
 };
 
 function About() {
 
-  const particlesInit = useCallback((main) => {
-    loadFull(main);
-  }, []);
+
 
   return (
-      <><Particles options={ particlesOptions } init={ particlesInit } /><Grid container>
+      <><Grid container>
           <Grid id='about' item xs={ 12 }>
             <Title title='ABOUT' />
           </Grid>
@@ -58,16 +44,7 @@ function About() {
               spacing={ 2 }
             >
               <Paper  elevation={ 0 } style={ styles.imgPaper } />
-              <Paper sx={ { m: 4 } } style={ styles.infoPaper }>
-                <Typography sx={ { m: 4 } }>
-                  I'm a Seattle based IoT and Full Stack Software Developer, and
-                  an interactive visual artist. My growth mindset and constant
-                  curiosity have led me to develop a multitude of skills across
-                  several disciplines, including low voltage and vehicle
-                  electronics, programming and software development, basic CAD
-                  design, 3D printing, circuit board design, and product design.
-                </Typography>
-              </Paper>
+              <Bio />
             </Stack>
           </Grid>
           <Grid
