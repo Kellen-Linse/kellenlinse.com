@@ -82,7 +82,7 @@ const ContactForm = () => {
       id='contact-form'
       elevation={6}
       style={formStyles.formPaper}
-      sx={{ m: 2 }}
+      sx={{ m: 5, p:3 }}
     >
       <Grid container>
       <Grid
@@ -133,7 +133,7 @@ const ContactForm = () => {
           container
           item
           sm={12}
-          sx={{ mx: 3, my: 2 }}
+          sx={{ mx: 3, my: 3 }}
           justifyContent='center'
           alignContent='center'
           direction='column'
@@ -155,7 +155,7 @@ const ContactForm = () => {
           container
           item
           sm={12}
-          sx={{ mx: 3, my: 2 }}
+          sx={{ mx: 3, mt: 2 }}
           justifyContent='end'
           alignContent='end'
           direction='column'

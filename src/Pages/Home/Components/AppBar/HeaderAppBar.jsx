@@ -15,6 +15,9 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 
+import './active.css';
+
+
 const HeaderAppBar = ({ lightObj, setWelcome }) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
@@ -133,24 +136,25 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             flexGrow: 1,
             display: { xs: 'none', md: 'flex' },
             justifyContent: 'end',
+            alignItems: 'center'
           }}
         >
-          <Link to='top' spy={true} smooth={true}>
+          <Link activeClass="active" to='top' spy={true} smooth={true}>
             <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               About
             </Button>
           </Link>
-          <Link to='projects' offset={-70} spy={true} smooth={true}>
+          <Link activeClass="active" to='projects' offset={-68} spy={true} smooth={true}>
             <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               Projects
             </Button>
           </Link>
-          <Link to='resume' offset={-70} spy={true} smooth={true}>
+          <Link activeClass="active" to='resume' offset={-68} spy={true} smooth={true}>
             <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               Resume
             </Button>
           </Link>
-          <Link to='contact' offset={-70} spy={true} smooth={true}>
+          <Link activeClass="active" to='contact' offset={-68} spy={true} smooth={true}>
             <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
               Contact
             </Button>

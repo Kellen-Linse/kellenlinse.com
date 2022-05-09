@@ -16,7 +16,7 @@ function Contact() {
         <Grid item xs={12}>
           <Title title='Contact' />
         </Grid>
-        <Grid item container justifyContent='center' alignContent='center' xs={12}>
+        <Grid item container justifyContent='center' alignContent='center' xs={12} sx={{my: 5}}>
           <ContactForm />
         </Grid>
       </Grid>

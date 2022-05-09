@@ -4,7 +4,7 @@ import ResumeCard from './components/ResumeCard';
 
 const styles = {
   imgPaper: {
-    height: 500,
+    height: 600,
     backgroundColor: '#26C6DA'
   },
 };
@@ -12,10 +12,10 @@ const styles = {
 function Resume() {
 
   return (
-    <Paper id='resume' elevation={0} style={styles.imgPaper}>
+    <Paper id='resume' elevation={0} sx={styles.imgPaper}>
 
       <Grid container>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{m: 5}}>
           <Title title='Resume' />
         </Grid>
         <Grid item container justifyContent='center' alignContent='center' xs={12}>

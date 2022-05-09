@@ -8,7 +8,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 function Footer() {
   const paperStyles = {
     bgPaper: {
-      height: 150,
+      height: 180,
       color: 'white',
       backgroundColor: 'black',
       display: 'flex',
@@ -91,7 +91,7 @@ function Footer() {
             justifyContent='center'
             alignItems='center'
           >
-            <Typography>Made by Kellen Linse &copy; 2022</Typography>
+            <Typography sx={{mb: 2}}>Made by Kellen Linse &copy; 2022</Typography>
           </Grid>
         </Grid>
       </Grid>

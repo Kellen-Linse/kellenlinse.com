@@ -2,7 +2,7 @@ import { Grid, Typography, Paper } from '@mui/material';
 
 function Title({ title }) {
   return (
-    <Grid style={{ textAlign: 'center', textShadow: '2px 2px #fff' }} container>
+    <Grid sx={{ textAlign: 'center', textShadow: '2px 2px #fff', mt: 3 }} container>
       <Grid item xs={12}>
         <Typography
           sx={{
@@ -25,7 +25,7 @@ function Title({ title }) {
           }}
           variant='h2'
         >
-          {title}
+          {title.toUpperCase()}
         </Typography>
       </Grid>
       <Grid item xs={12}>
