@@ -4,7 +4,7 @@ import WelcomeScreen from './Pages/WelcomeScreen/WelcomeScreen';
 
 function Main({ lightObj }) {
   // Holds state of welcome screen
-  const [welcome, setWelcome] = useState(false); // Change to true when not working on Home
+  const [welcome, setWelcome] = useState(true); // Change to true when not working on Home
 
   return (
     <>

@@ -6,8 +6,10 @@ import profileImage from '../images/Profile_Large.jpg';
 
 const styles = {
   bgPaper: {
-    backgroundImage: `url(${bgImage})`,
+    // backgroundImage: `url(${bgImage})`,
+    backgroundColor: 'black',
     backgroundSize: 'cover',
+    minHeight: '800px'
   },
   imgPaper: {
     border: '5px solid #00e676',
