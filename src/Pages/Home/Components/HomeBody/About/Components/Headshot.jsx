@@ -10,12 +10,13 @@ const styles = {
     width: 350,
     borderRadius: '50%',
     backgroundSize: 'cover',
+    mb: 5
   }
 }
 
 function Headshot() {
   return ( 
-    <Paper  elevation={ 0 } style={ styles.imgPaper } />
+    <Paper  elevation={ 0 } sx={ styles.imgPaper } />
   );
 }
 

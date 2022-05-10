@@ -5,14 +5,16 @@ const styles = {
     border: '5px solid #00e676',
     maxWidth: '75%',
     minHeight: '300px',
-    textAlign: 'start'
+    textAlign: 'start',
+    m: 4,
+    mt: 8
   }
 }
 
 
 function Bio() {
   return (
-    <Paper sx={{ m: 4 }} style={styles.infoPaper}>
+    <Paper sx={styles.infoPaper}>
       <Typography variant='h5' sx={{ m: 4 }}>
         Hi! My name is Kellen Linse.
       </Typography>

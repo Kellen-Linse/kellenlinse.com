@@ -1,18 +1,10 @@
 import { Typography, Grid, Button, Container } from '@mui/material';
-import React, { useCallback } from 'react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
 
-import particlesOptions from './particles.json';
 
 function WelcomeScreen({ setWelcome }) {
-  const particlesInit = useCallback((main) => {
-    loadFull(main);
-  }, []);
 
   return (
     <>
-      <Particles options={particlesOptions} init={particlesInit} />
       <Grid
         container
         spacing={0}

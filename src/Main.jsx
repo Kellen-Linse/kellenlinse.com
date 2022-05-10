@@ -1,13 +1,22 @@
 import { useState } from 'react';
 import Home from './Pages/Home/Home';
 import WelcomeScreen from './Pages/WelcomeScreen/WelcomeScreen';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import { useCallback } from 'react';
+import particlesOptions from './particles.json';
 
 function Main({ lightObj }) {
   // Holds state of welcome screen
   const [welcome, setWelcome] = useState(true); // Change to true when not working on Home
+  // Sets up particles
+  const particlesInit = useCallback((main) => {
+    loadFull(main);
+  }, []);
 
   return (
     <>
+      <Particles options={ particlesOptions } init={ particlesInit } />
       {welcome ? (
         <WelcomeScreen setWelcome={setWelcome} />
       ) : (
