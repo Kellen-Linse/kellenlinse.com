@@ -3,13 +3,13 @@ import {
   Button,
   Divider,
   Menu,
-  Typography,
   IconButton,
   Toolbar,
   Box,
   AppBar,
+  Link
 } from '@mui/material';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 import MenuIcon from '@mui/icons-material/Menu';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -48,13 +48,11 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
           >
             <DeveloperBoardIcon />
           </IconButton>
-          <Typography
-            variant='h5'
-            component='div'
-            sx={{ flexGrow: 1, ml: 0, fontFamily: 'IBM Plex Mono' }}
-          >
+
+          <Link variant='h5'
+            sx={{ flexGrow: 1, ml: 0, fontFamily: 'IBM Plex Mono'}} underline="none" color='#000' href='https://www.linkedin.com/in/kellen-linse/'>
             KELLEN LINSE
-          </Typography>
+          </Link>
         </Box>
 
         <Box
@@ -91,7 +89,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
               maxWidth: 250,
             }}
           >
-            <Link to='top' spy={true} smooth={true}>
+            <ScrollLink to='top' spy={true} smooth={true}>
               <Button
                 onClick={() => handleCloseNavMenu()}
                 color='inherit'
@@ -99,8 +97,8 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
               >
                 About
               </Button>
-            </Link>
-            <Link to='projects' offset={-70} spy={true} smooth={true}>
+            </ScrollLink>
+            <ScrollLink to='projects' offset={-70} spy={true} smooth={true}>
               <Button
                 onClick={() => handleCloseNavMenu()}
                 color='inherit'
@@ -108,8 +106,8 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
               >
                 Projects
               </Button>
-            </Link>
-            <Link to='resume' offset={-70} spy={true} smooth={true}>
+            </ScrollLink>
+            <ScrollLink to='resume' offset={-70} spy={true} smooth={true}>
               <Button
                 onClick={() => handleCloseNavMenu()}
                 color='inherit'
@@ -117,8 +115,8 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
               >
                 Resume
               </Button>
-            </Link>
-            <Link to='contact' offset={-70} spy={true} smooth={true}>
+            </ScrollLink>
+            <ScrollLink to='contact' offset={-70} spy={true} smooth={true}>
               <Button
                 onClick={() => handleCloseNavMenu()}
                 color='inherit'
@@ -126,7 +124,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
               >
                 Contact
               </Button>
-            </Link>
+            </ScrollLink>
             <Divider sx={{ mt: 1 }} />
             <Button
               onClick={() => {
@@ -155,7 +153,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             alignItems: 'center',
           }}
         >
-          <Link
+          <ScrollLink
             isDynamic
             activeClass='active'
             to='top'
@@ -168,8 +166,8 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             >
               About
             </Button>
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             isDynamic
             activeClass='active'
             to='projects'
@@ -183,8 +181,8 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             >
               Projects
             </Button>
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             isDynamic
             activeClass='active'
             to='resume'
@@ -198,8 +196,8 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             >
               Resume
             </Button>
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             isDynamic
             activeClass='active'
             to='contact'
@@ -213,7 +211,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             >
               Contact
             </Button>
-          </Link>
+          </ScrollLink>
           <Button
           sx={buttonStyling}
             onClick={() => lightObj.setLight(!lightObj.light)}

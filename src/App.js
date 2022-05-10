@@ -12,7 +12,7 @@ export const darkTheme = createTheme({
     secondary: {
       main: '#00e676',
     },
-    iconColor:{
+    iconColor: {
       main: 'rgba(0,0,0,0.87)',
     },
     background: {
@@ -24,8 +24,8 @@ export const darkTheme = createTheme({
       secondary: 'rgba(0,0,0,0.87)',
     },
     Typography: {
-      fontFamily: 'Quicksand'
-    }
+      fontFamily: 'Quicksand',
+    },
   },
 });
 
@@ -38,7 +38,7 @@ export const lightTheme = createTheme({
     secondary: {
       main: '#26c6da',
     },
-    iconColor:{
+    iconColor: {
       main: '#ffffff',
     },
     text: {
@@ -48,13 +48,14 @@ export const lightTheme = createTheme({
   },
 });
 
-
 function App() {
   const [light, setLight] = useState(false);
   return (
     <ThemeProvider theme={light ? lightTheme : darkTheme}>
       <CssBaseline />
-      <Main lightObj={{setLight, light}} />
+      <Main
+        lightObj={{ setLight, light }}
+      />
     </ThemeProvider>
   );
 }

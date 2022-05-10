@@ -20,8 +20,12 @@
     <script id="react-dotenv" src="./env.js"></script>
   </head>
 
-  <body>
+  <body id="body" class="stop-scrolling">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <script>
+    // Removes class which helps hide scroll bars during initial animation.
+    setTimeout(() => document.getElementById("body").classList.remove("stop-scrolling"), 4000);  
+  </script>
 </html>
