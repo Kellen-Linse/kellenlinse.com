@@ -1,4 +1,4 @@
-import { Grid, Stack, Typography } from '@mui/material';
+import { Grid, Stack } from '@mui/material';
 import Title from '../../Shared_Components/Title';
 import Bio from './Components/Bio';
 import Headshot from './Components/Headshot';

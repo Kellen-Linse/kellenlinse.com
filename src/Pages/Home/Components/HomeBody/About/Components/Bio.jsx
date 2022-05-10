@@ -2,7 +2,6 @@ import { Paper, Typography } from '@mui/material';
 
 const styles = {
   infoPaper: {
-    textAlign: 'center',
     border: '5px solid #00e676',
     maxWidth: '75%',
     minHeight: '300px',
