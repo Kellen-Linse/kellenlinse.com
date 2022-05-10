@@ -44,8 +44,8 @@ const skillsList = [
     }
   },
   {
-    class: 'devicon-dart-plain-wordmark' ,
-    title: '',
+    class: 'devicon-dart-plain' ,
+    title: 'Dart',
     color: '#00e676'
   },
   {
@@ -59,7 +59,7 @@ const skillsList = [
   },
   {
     class: 'devicon-embeddedc-plain-wordmark' ,
-    title: '',
+    title: 'Embedded',
     color: '#00e676'
   },
   {
@@ -72,8 +72,8 @@ const skillsList = [
     }
   },
   {
-    class: 'devicon-express-original-wordmark' ,
-    title: '',
+    class: 'devicon-express-original' ,
+    title: 'Express',
     color: '#b3b3b3',
     display: {
       xs: 'none',
@@ -122,8 +122,8 @@ const skillsList = [
     }
   },
   {
-    class: 'devicon-ionic-original-wordmark' ,
-    title: '',
+    class: 'devicon-ionic-original' ,
+    title: 'Ionic',
     color: '#26c6da'
   },
   {
@@ -150,18 +150,18 @@ const skillsList = [
     }
   },
   {
-    class: 'devicon-mongodb-plain-wordmark' ,
-    title: '',
+    class: 'devicon-mongodb-plain' ,
+    title: 'MongoDB',
     color: '#26c6da'
   },
   {
-    class: 'devicon-mysql-plain-wordmark' ,
-    title: '',
+    class: 'devicon-mysql-plain' ,
+    title: 'mySQL',
     color: '#26c6da'
   },
   {
-    class: 'devicon-nodejs-plain-wordmark' ,
-    title: '',
+    class: 'devicon-nodejs-plain' ,
+    title: 'Node',
     color: '#26c6da'
   },
   {
@@ -198,13 +198,13 @@ const skillsList = [
     }
   },
   {
-    class: 'devicon-sequelize-plain-wordmark' ,
-    title: '',
+    class: 'devicon-sequelize-plain' ,
+    title: 'Sequelize',
     color: '#26c6da'
   },
   {
-    class: 'devicon-sqlite-plain-wordmark' ,
-    title: '',
+    class: 'devicon-sqlite-plain' ,
+    title: 'SQLite',
     color: '#26c6da'
   },
 ]

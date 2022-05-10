@@ -7,7 +7,7 @@ import skillsList from './SkillsList';
 const gridStyle = {
   border: '4px solid white',
   width: {
-    xs: '80px',
+    xs: '100px',
     lg: '140px'
   } ,
   height: {
@@ -20,6 +20,7 @@ const gridStyle = {
   m: 3,
   px: 3,
   pt: 2,
+  mb: 1,
   transition: "transform 0.15s ease-in-out",
   "&:hover": { transform: "scale3d(1.1, 1.1, 1)" },
 };
@@ -37,10 +38,10 @@ function Skills() {
             key={i}
           >
             <i
-              style={{ fontSize: matches ? '40px' : '80px', color: 'whitesmoke' }}
+              style={{ fontSize: matches ? '50px' : '80px', color: 'whitesmoke' }}
               className={skill.class}
             ></i>
-            <Typography sx={{ mt: 2, color: 'whitesmoke' }}>
+            <Typography sx={{ mt: 0, color: 'whitesmoke' }}>
               {skill.title}
             </Typography>
           </Grid>
