@@ -1,7 +1,8 @@
-import { Grid, Stack } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import Title from '../../Shared_Components/Title';
 import Bio from './Components/Bio';
 import Headshot from './Components/Headshot';
+import Skills from './Components/Skills';
 
 function About() {
   return (
@@ -40,7 +41,12 @@ function About() {
         alignItems='center'
         xs={12}
         md={6}
-      ></Grid>
+        sx={{
+          mb: 5
+        }}
+      >
+        <Skills />
+      </Grid>
     </Grid>
   );
 }

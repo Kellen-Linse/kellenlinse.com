@@ -15,10 +15,13 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 
-
-
 import './active.css';
-
+const buttonStyling = {
+  transition: 'transform 0.15s ease-in-out',
+  '&:hover': { transform: 'scale3d(1.05, 1.05, 1)' },
+  fontFamily: 'IBM Plex Mono',
+  fontSize: '1.3em' 
+};
 
 const HeaderAppBar = ({ lightObj, setWelcome }) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -34,7 +37,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
   return (
     <AppBar
       position='fixed'
-      sx={{ borderBottom: 3, borderColor: 'secondary.main', fontSize: '1.3em' }}
+      sx={{ borderBottom: 3, borderColor: 'secondary.main'}}
     >
       <Toolbar>
         <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
@@ -50,7 +53,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             component='div'
             sx={{ flexGrow: 1, ml: 0, fontFamily: 'IBM Plex Mono' }}
           >
-            Kellen Linse
+            KELLEN LINSE
           </Typography>
         </Box>
 
@@ -88,7 +91,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
               <Button
                 onClick={() => handleCloseNavMenu()}
                 color='inherit'
-                sx={{ fontFamily: 'IBM Plex Mono', px: 3 }}
+                sx={buttonStyling}
               >
                 About
               </Button>
@@ -97,7 +100,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
               <Button
                 onClick={() => handleCloseNavMenu()}
                 color='inherit'
-                sx={{ fontFamily: 'IBM Plex Mono', px: 3 }}
+                sx={buttonStyling}
               >
                 Projects
               </Button>
@@ -106,7 +109,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
               <Button
                 onClick={() => handleCloseNavMenu()}
                 color='inherit'
-                sx={{ fontFamily: 'IBM Plex Mono', px: 3 }}
+                sx={buttonStyling}
               >
                 Resume
               </Button>
@@ -115,15 +118,15 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
               <Button
                 onClick={() => handleCloseNavMenu()}
                 color='inherit'
-                sx={{ fontFamily: 'IBM Plex Mono', px: 3 }}
+                sx={buttonStyling}
               >
                 Contact
               </Button>
             </Link>
-            <Divider sx={{ mt: 1}} />
+            <Divider sx={{ mt: 1 }} />
             <Button
               onClick={() => {
-                lightObj.setLight(!lightObj.light); 
+                lightObj.setLight(!lightObj.light);
                 handleCloseNavMenu();
               }}
               color='secondary'
@@ -145,30 +148,70 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             flexGrow: 1,
             display: { xs: 'none', md: 'flex' },
             justifyContent: 'end',
-            alignItems: 'center'
+            alignItems: 'center',
           }}
         >
-          <Link isDynamic activeClass="active" to='top' spy={true} smooth={true}>
-            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
+          <Link
+            isDynamic
+            activeClass='active'
+            to='top'
+            spy={true}
+            smooth={true}
+          >
+            <Button
+              color='inherit'
+              sx={buttonStyling}
+            >
               About
             </Button>
           </Link>
-          <Link isDynamic activeClass="active" to='projects' offset={-70} spy={true} smooth={true}>
-            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
+          <Link
+            isDynamic
+            activeClass='active'
+            to='projects'
+            offset={-70}
+            spy={true}
+            smooth={true}
+          >
+            <Button
+              color='inherit'
+              sx={buttonStyling}
+            >
               Projects
             </Button>
           </Link>
-          <Link isDynamic activeClass="active" to='resume' offset={-70} spy={true} smooth={true}>
-            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
+          <Link
+            isDynamic
+            activeClass='active'
+            to='resume'
+            offset={-70}
+            spy={true}
+            smooth={true}
+          >
+            <Button
+              color='inherit'
+              sx={buttonStyling}
+            >
               Resume
             </Button>
           </Link>
-          <Link isDynamic activeClass="active" to='contact' offset={-70} spy={true} smooth={true}>
-            <Button color='inherit' sx={{ fontFamily: 'IBM Plex Mono', fontSize: '1.1em' }}>
+          <Link
+            isDynamic
+            activeClass='active'
+            to='contact'
+            offset={-70}
+            spy={true}
+            smooth={true}
+          >
+            <Button
+              color='inherit'
+              sx={buttonStyling}
+            >
               Contact
             </Button>
           </Link>
           <Button
+          sx={buttonStyling}
             onClick={() => lightObj.setLight(!lightObj.light)}
             color='inherit'
           >

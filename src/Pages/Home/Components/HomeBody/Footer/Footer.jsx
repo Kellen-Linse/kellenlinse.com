@@ -9,7 +9,9 @@ const paperStyles = {
     display: 'flex',
     position: 'relative',
     top: '-35px',
-    backgroundColor: '#26c6da',
+    backgroundColor: 'primary.main',
+    transition: "transform 0.15s ease-in-out",
+    "&:hover": { transform: "scale3d(1.1, 1.1, 1)" },
   },
 };
 
@@ -24,7 +26,7 @@ function Footer() {
         sx={{ pt: 1}}
       >
         <ScrollLink to='top' spy={true} smooth={true}>
-          <Paper sx={paperStyles.upPaper}>
+          <Paper sx={paperStyles.upPaper} elevation={12}>
             <Grid container item justifyContent='center' alignItems='center'>
               <ArrowUpwardIcon fontSize='large' />
             </Grid>

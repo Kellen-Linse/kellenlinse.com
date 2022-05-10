@@ -15,8 +15,10 @@ const styles = {
     width: 80,
     height: 80,
     display: 'flex',
-    backgroundColor: '#26c6da',
-    mx: 4,
+    backgroundColor: 'primary.main',
+    transition: "transform 0.15s ease-in-out",
+    "&:hover": { transform: "scale3d(1.1, 1.1, 1)" },
+    m: 4,
   }
 };
 
@@ -36,7 +38,7 @@ function Contact() {
           alignItems='start'
           sx={{ mt: 4 }}
         >
-          <Paper sx={styles.iconPaper}>
+          <Paper sx={styles.iconPaper} elevation={12}>
             <Grid container item justifyContent='center' alignItems='center'>
               <Link href='https://www.linkedin.com/in/kellen-linse/'>
                 <IconButton color='iconColor'>
@@ -45,7 +47,7 @@ function Contact() {
               </Link>
             </Grid>
           </Paper>
-          <Paper sx={styles.iconPaper}>
+          <Paper sx={styles.iconPaper} elevation={12}>
             <Grid container item justifyContent='center' alignItems='center'>
               <Link href='https://github.com/Kellen-Linse'>
                 <IconButton color='iconColor'>
@@ -54,7 +56,7 @@ function Contact() {
               </Link>
             </Grid>
           </Paper>
-          <Paper sx={styles.iconPaper}>
+          <Paper sx={styles.iconPaper} elevation={12}>
             <Grid container item justifyContent='center' alignItems='center'>
               <Link href='https://mailto:kellen.linse@gmail.com'>
                 <IconButton color='iconColor'>

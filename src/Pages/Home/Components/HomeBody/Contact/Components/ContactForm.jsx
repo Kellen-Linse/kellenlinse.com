@@ -9,9 +9,9 @@ const formStyles = {
   formPaper: {
     maxWidth: 500,
     border: '3px solid #26c6da',
-    m: {xs: 1, md: 5}, 
+    m: { xs: 1, md: 5 },
     mt: '500px',
-    p:3
+    p: 3,
   },
   inputFormsSX: {
     mx: 3,
@@ -25,6 +25,12 @@ const formStyles = {
       width: '100%',
       color: 'grey',
     },
+  },
+  buttonStyle: {
+    color: 'text.secondary',
+    transition: 'transform 0.15s ease-in-out',
+    '&:hover': { transform: 'scale3d(1.1, 1.1, 1)' },
+    fontWeight: 'bold'
   },
 };
 
@@ -81,56 +87,51 @@ const ContactForm = () => {
   };
 
   return (
-    <Paper
-      id='contact-form'
-      elevation={6}
-      sx={formStyles.formPaper}
-    >
+    <Paper id='contact-form' elevation={12} sx={formStyles.formPaper}>
       <Grid container>
-      <Grid
-          container sx={{mx: 3}}>
-        <Grid
-        sx={{pr: {sm: 1}}}
-          container
-          item
-          sm={6}
-          justifyContent='center'
-          alignContent='center'
-          direction='column'
-        >
-          <TextField
-            fullWidth
-            label='Your Name'
-            variant='outlined'
-            color='secondary'
-            InputLabelProps={formStyles.label}
-            sx={formStyles.inputFormsSX}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </Grid>
-        <Grid
-          sx={{pl: {sm: 1}}}
-          container
-          item
-          sm={6}
-          justifyContent='center'
-          alignContent='center'
-          direction='column'
-        >
-          <TextField
-            fullWidth
-            error={!validEmail}
-            label='Your Email Address'
-            variant='outlined'
-            color='secondary'
-            InputLabelProps={formStyles.label}
-            sx={formStyles.inputFormsSX}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Grid>
+        <Grid container sx={{ mx: 3 }}>
+          <Grid
+            sx={{ pr: { sm: 1 } }}
+            container
+            item
+            sm={6}
+            justifyContent='center'
+            alignContent='center'
+            direction='column'
+          >
+            <TextField
+              fullWidth
+              label='Your Name'
+              variant='outlined'
+              color='secondary'
+              InputLabelProps={formStyles.label}
+              sx={formStyles.inputFormsSX}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </Grid>
+          <Grid
+            sx={{ pl: { sm: 1 } }}
+            container
+            item
+            sm={6}
+            justifyContent='center'
+            alignContent='center'
+            direction='column'
+          >
+            <TextField
+              fullWidth
+              error={!validEmail}
+              label='Your Email Address'
+              variant='outlined'
+              color='secondary'
+              InputLabelProps={formStyles.label}
+              sx={formStyles.inputFormsSX}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Grid>
+        </Grid>
         <Grid
           container
           item
@@ -162,7 +163,7 @@ const ContactForm = () => {
           alignContent='end'
           direction='column'
         >
-          <Button variant='contained' sx={{color: 'text.secondary'}} onClick={submit}>
+          <Button variant='contained' sx={formStyles.buttonStyle} onClick={submit}>
             Send Message
           </Button>
         </Grid>

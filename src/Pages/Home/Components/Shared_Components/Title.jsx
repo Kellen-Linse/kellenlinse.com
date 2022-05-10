@@ -14,7 +14,7 @@ function Title({ title, txtColor }) {
             color: txtColor,
             textAlign: 'center',
             fontWeight: '400',
-            textShadow: '1px 1px 2px rgba(0, 0, 0, .7)',
+            textShadow: '1px 1px 3px rgba(150, 150, 150, .7)',
             fontSize: {
               xs: '2em', // theme.breakpoints.up('xs')
               sm: '2.2em', // theme.breakpoints.up('sm')
