@@ -106,7 +106,20 @@ function WelcomeScreen({ setWelcome }) {
             justifyContent: 'center',
           }}
         >
-          <Typography variant='h4'>
+          <Typography
+            color='white'
+            variant='h4'
+            sx={{
+              textAlign: 'center',
+              fontSize: {
+                xs: '1.2em', // theme.breakpoints.up('xs')
+                sm: '1.4em', // theme.breakpoints.up('sm')
+                md: '1.4em', // theme.breakpoints.up('md')
+                lg: '1.8em', // theme.breakpoints.up('lg')
+                xl: '2em', // theme.breakpoints.up('xl')
+              },
+            }}
+          >
             Click anywhere to make more particles!
           </Typography>
         </Container>
