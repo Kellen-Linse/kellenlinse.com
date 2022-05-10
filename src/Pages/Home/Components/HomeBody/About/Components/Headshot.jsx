@@ -3,11 +3,12 @@ import profileImage from '../../images/Profile_Large.jpg';
 
 const styles = {
   imgPaper: {
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundImage: `url(${profileImage})`,
     height: 350,
     width: 350,
     borderRadius: '50%',
-    margin: '28px',
     backgroundSize: 'cover',
   }
 }

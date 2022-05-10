@@ -62,6 +62,10 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             flexGrow: 1,
             display: { xs: 'flex', md: 'none' },
             justifyContent: 'end',
+            mr: {
+              xs: 2,
+              sm: 1
+            }
           }}
         >
           <IconButton onClick={handleOpenNavMenu} color='inherit'>

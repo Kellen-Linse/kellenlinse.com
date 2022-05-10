@@ -1,21 +1,32 @@
 import { Typography, Grid } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import skillsList from './SkillsList';
+
 
 const gridStyle = {
   border: '4px solid white',
-  width: '140px',
-  height: '150px',
+  width: {
+    xs: '80px',
+    lg: '140px'
+  } ,
+  height: {
+    xs: '100px',
+    lg: '150px'
+  } ,
   justifyContent: 'center',
   alignContent: 'center',
   borderRadius: '5%',
   m: 3,
   px: 3,
-  py: 1,
+  pt: 2,
   transition: "transform 0.15s ease-in-out",
   "&:hover": { transform: "scale3d(1.1, 1.1, 1)" },
 };
 
 function Skills() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('lg'));
   return (
     <Grid item xs={12} container justifyContent='center' alignContent='center'>
       {skillsList.map((skill, i) => {
@@ -26,7 +37,7 @@ function Skills() {
             key={i}
           >
             <i
-              style={{ fontSize: '80px', color: 'whitesmoke' }}
+              style={{ fontSize: matches ? '40px' : '80px', color: 'whitesmoke' }}
               className={skill.class}
             ></i>
             <Typography sx={{ mt: 2, color: 'whitesmoke' }}>
