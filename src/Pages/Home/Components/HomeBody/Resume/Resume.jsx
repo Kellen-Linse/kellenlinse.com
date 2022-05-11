@@ -7,12 +7,12 @@ function Resume() {
   return (
     <Box sx={{ height: 800 }}>
       <Stack
-       sx={{ height: '100%' }}
+        sx={{ height: '100%' }}
         id='resume'
         direction='column'
         alignItems='center'
       >
-        <Title title='<Resume />' txtColor='primary.main'/>
+        <Title title='<Resume />' txtColor='primary.main' />
         <ResumeCard />
       </Stack>
     </Box>

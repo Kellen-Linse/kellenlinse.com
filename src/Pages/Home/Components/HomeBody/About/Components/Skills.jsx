@@ -1,6 +1,7 @@
 import { Typography, Grid } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { FadeIn } from '../../../../../../Effects/FadeIn';
 import skillsList from './SkillsList';
 
 
@@ -37,6 +38,8 @@ function Skills() {
             sx={{ ...gridStyle, borderColor: skill.color, display: skill.display }}
             key={i}
           >
+            <FadeIn>
+
             <i
               style={{ fontSize: matches ? '50px' : '80px', color: 'whitesmoke' }}
               className={skill.class}
@@ -44,6 +47,7 @@ function Skills() {
             <Typography sx={{ mt: 0, color: 'whitesmoke' }}>
               {skill.title}
             </Typography>
+            </FadeIn>
           </Grid>
         );
       })}

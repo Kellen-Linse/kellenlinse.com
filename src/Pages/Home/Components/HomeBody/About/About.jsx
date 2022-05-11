@@ -1,9 +1,10 @@
 import { Grid, Stack } from '@mui/material';
+
+import { SlideInLeft } from '../../../../../Effects/SlideInLeft';
 import Title from '../../Shared_Components/Title';
 import Bio from './Components/Bio';
 import Headshot from './Components/Headshot';
 import Skills from './Components/Skills';
-import { SlideInLeft } from '../../../../../Effects/SlideInLeft';
 
 function About() {
   return (

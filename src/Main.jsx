@@ -7,6 +7,7 @@ import { useCallback } from 'react';
 import particlesOptions from './particles.json';
 import { FadeIn } from './Effects/FadeIn';
 
+
 function Main({ lightObj }) {
   // Holds state of welcome screen
   const [welcome, setWelcome] = useState(true); // Change to true when not working on Home
