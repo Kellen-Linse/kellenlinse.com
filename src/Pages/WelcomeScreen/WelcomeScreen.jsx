@@ -1,4 +1,4 @@
-import { Typography, Grid, Button, Container } from '@mui/material';
+import { Typography, Grid, Button, Container, Box } from '@mui/material';
 
 import React from 'react';
 import { Bouncer } from '../../Effects/Bouncer';
@@ -15,9 +15,16 @@ const clickContainerSX = {
   justifyContent: 'center',
 };
 
+const boxSX = {
+  width: '100%',
+  height: '100%',
+  margin: 0,
+  overflow: 'hidden',
+};
+
 function WelcomeScreen({ setWelcome }) {
   return (
-    <>
+    <Box sx={boxSX}>
       <Grid
         container
         spacing={0}
@@ -28,7 +35,7 @@ function WelcomeScreen({ setWelcome }) {
       >
         <Grid item xs={3} align='center'>
           <WelcomeMessage />
-          <ZoomIn duration={2}>
+          <ZoomIn duration={4}>
             <EnterButton setWelcome={setWelcome} />
           </ZoomIn>
         </Grid>
@@ -39,9 +46,11 @@ function WelcomeScreen({ setWelcome }) {
           </Bouncer>
         </Container>
       </Grid>
-    </>
+    </Box>
   );
 }
+
+// ============================================= additional components ==========================================
 
 export default WelcomeScreen;
 
@@ -123,10 +132,10 @@ function WelcomeMessage() {
             },
           }}
         >
-          Internet of Things and Full Stack software developer.
+          IoT and Full Stack software developer.
         </Typography>
       </FadeInRight>
-      <FadeInRight duration={2}>
+      <FadeInRight duration={4}>
         <Typography
           color='white'
           variant='h4'
