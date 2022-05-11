@@ -3,14 +3,11 @@ import Title from '../../Shared_Components/Title';
 import Bio from './Components/Bio';
 import Headshot from './Components/Headshot';
 import Skills from './Components/Skills';
+import { SlideIn, SlideInLeft } from '../../../../../Effects/SlideInLeft';
 
 function About() {
   return (
-    <Grid 
-      id='about' 
-      container 
-      minHeight={1000} 
-      alignItems='stretch'>
+    <Grid id='about' container minHeight={1000} alignItems='stretch'>
       <Title title='<ABOUT />' txtColor='primary.main' />
       <Grid
         item
@@ -29,7 +26,9 @@ function About() {
           justifyContent='space-between'
           alignItems='center'
         >
-          <Headshot />
+          <SlideInLeft>
+            <Headshot />
+          </SlideInLeft>
           <Bio />
         </Stack>
       </Grid>
@@ -42,7 +41,7 @@ function About() {
         xs={12}
         md={6}
         sx={{
-          mb: 5
+          mb: 5,
         }}
       >
         <Skills />
