@@ -20,10 +20,13 @@ function Main({ lightObj }) {
       <FadeIn duration={6}>
         <Particles options={particlesOptions} init={particlesInit} />
       </FadeIn>
-      {welcome ? (
+      { welcome ? (
         <WelcomeScreen setWelcome={setWelcome} />
       ) : (
+        
+        <FadeIn duration={3}>       
         <Home lightObj={lightObj} setWelcome={setWelcome} />
+        </FadeIn>
       )}
     </>
   );
