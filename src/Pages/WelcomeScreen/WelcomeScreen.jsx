@@ -126,7 +126,7 @@ function WelcomeMessage() {
           Internet of Things and Full Stack software developer.
         </Typography>
       </FadeInRight>
-      <FadeInRight duration={4}>
+      <FadeInRight duration={2}>
         <Typography
           color='white'
           variant='h4'
