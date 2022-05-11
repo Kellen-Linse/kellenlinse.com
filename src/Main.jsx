@@ -10,7 +10,7 @@ import { FadeIn } from './Effects/FadeIn';
 
 function Main({ lightObj }) {
   // Holds state of welcome screen
-  const [welcome, setWelcome] = useState(true); // Change to true when not working on Home
+  const [welcome, setWelcome] = useState(false); // Change to true when not working on Home
   // Sets up particles
   const particlesInit = useCallback((main) => {
     loadFull(main);

@@ -26,6 +26,8 @@ export default function PDFModal({open, handleClose}) {
       adjWidth = 500;
     } else if (width < 800){
       adjWidth = 600;
+    } else {
+      adjWidth = 800;
     }
     
     return adjWidth;

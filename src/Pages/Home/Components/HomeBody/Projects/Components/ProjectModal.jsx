@@ -5,8 +5,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
-  height: 500,
+  width: {xs: '90%', lg: '50%'},
+  height: {xs: '80%', lg: '60%'},
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -21,7 +21,7 @@ export default function ProjectModal({ open, handleClose, card }) {
   return (
     <Modal open={open} onClose={handleClose} card={card}>
       <Box sx={style}>
-        <Grid container sx={{height: 465}}>
+        <Grid container>
           <Grid
           container
             direction='column'
