@@ -132,7 +132,7 @@ function WelcomeMessage() {
             },
           }}
         >
-          IoT and Full Stack software developer.
+          IoT and Full Stack software developer,
         </Typography>
       </FadeInRight>
       <FadeInRight duration={4}>
