@@ -5,7 +5,7 @@ import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { useCallback } from 'react';
 import particlesOptions from './particles.json';
-import { FadeIn} from './Effects/FadeIn';
+import { FadeIn } from './Effects/FadeIn';
 
 function Main({ lightObj }) {
   // Holds state of welcome screen
@@ -20,12 +20,11 @@ function Main({ lightObj }) {
       <FadeIn duration={6}>
         <Particles options={particlesOptions} init={particlesInit} />
       </FadeIn>
-      { welcome ? (
+      {welcome ? (
         <WelcomeScreen setWelcome={setWelcome} />
       ) : (
-        
-        <FadeIn duration={3}>       
-        <Home lightObj={lightObj} setWelcome={setWelcome} />
+        <FadeIn duration={3}>
+          <Home lightObj={lightObj} setWelcome={setWelcome} />
         </FadeIn>
       )}
     </>

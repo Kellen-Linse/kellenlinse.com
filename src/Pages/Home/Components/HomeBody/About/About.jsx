@@ -3,7 +3,7 @@ import Title from '../../Shared_Components/Title';
 import Bio from './Components/Bio';
 import Headshot from './Components/Headshot';
 import Skills from './Components/Skills';
-import { SlideIn, SlideInLeft } from '../../../../../Effects/SlideInLeft';
+import { SlideInLeft } from '../../../../../Effects/SlideInLeft';
 
 function About() {
   return (
