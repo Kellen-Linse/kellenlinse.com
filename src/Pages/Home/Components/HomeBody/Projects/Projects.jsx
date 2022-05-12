@@ -3,7 +3,7 @@ import Title from '../../Shared_Components/Title';
 import ProjectCard from './Components/ProjectCard';
 
 //Import Project info
-import projectInfo from '../projectInfo/projectInfo.js';
+import projectInfo from '../../../../../projectInfo/projectInfo.js';
 
 const styles = {
   imgPaper: {

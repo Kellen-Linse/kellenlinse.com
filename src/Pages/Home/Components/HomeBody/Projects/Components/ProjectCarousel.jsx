@@ -28,7 +28,12 @@ export default function ProjectCarousel({ projects }) {
 function Item({ project }) {
   return (
     <Card elevation={0} sx={{ height: 600 }}>
-      <Stack height={'100%'} direction='column'>
+      <Stack
+        height={'100%'}
+        direction='column'
+        justifyContent='space-around'
+        alignItems='center'
+      >
         <Typography variant='h5' sx={{ my: { xs: 1, md: 3 } }}>
           {project.title}
         </Typography>
@@ -45,7 +50,11 @@ function Item({ project }) {
           </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: 'center', p: 0, m: 0 }}>
-          <Button href={project.link} variant='outlined'>
+          <Button
+            variant='contained'
+            sx={{ color: 'secondary.main' }}
+            href={project.link}
+          >
             Check it out!
           </Button>
         </CardActions>

@@ -1,5 +1,5 @@
 import { Paper } from '@mui/material';
-import profileImage from '../../images/Profile_Large.jpg';
+import profileImage from '../../../../../../images/Profile_Large.jpg';
 
 const styles = {
   imgPaper: {

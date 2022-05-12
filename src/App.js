@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
-import Main from './Main';
+import Main from './Pages/Main';
 import { darkTheme, lightTheme } from './Theme/theme';
 
 function App() {

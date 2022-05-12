@@ -6,8 +6,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: { xs: '90%', lg: '50%' },
-  height: { xs: '90%', lg: '60%' },
+  width: { xs: '90%',  sm: '70%',  md: '50%', xl: '40%' },
+  height: { xs: '90%',  sm: '70%', md: '70%', xl: '70%' },
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -28,7 +28,7 @@ export default function ProjectModal({ open, handleClose, card }) {
        <Typography
             variant='h7'
             component='h2'
-            sx={{color: 'primary.main', mb: 1 }}
+            sx={{color: 'secondary.main', mb: 1 }}
           >
             {card.title}
           </Typography>
@@ -36,7 +36,7 @@ export default function ProjectModal({ open, handleClose, card }) {
        </Box>
           <ProjectCarousel projects={card.projects} />
           <Box display='flex' justifyContent='flex-end'>
-          <Button sx={{width: 100, fontSize:'1.1em'}} onClick={() => handleClose()}>
+          <Button sx={{width: 100, fontSize:'1.1em', color: 'secondary.main'}} onClick={() => handleClose()}>
             Close
           </Button>
           </Box>

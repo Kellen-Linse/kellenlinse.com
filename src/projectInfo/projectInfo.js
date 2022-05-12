@@ -36,9 +36,9 @@ const projectInfo = [
     img: IoTImg,
     projects: [
       {
-        title: 'This is a test title!',
-        description: 'This description? Yep! You guessed it! A test!',
-        img: webDevImg,
+        title: 'This is a IoT test title!',
+        description: 'This description? Yep! You guessed it! An IoT test!',
+        img: IoTImg,
         link: 'https://www.google.com'
       }
     ]
@@ -49,9 +49,9 @@ const projectInfo = [
     img: artImg,
     projects: [
       {
-        title: 'This is a test title!',
-        description: 'This description? Yep! You guessed it! A test!',
-        img: webDevImg,
+        title: 'This is a visual test title!',
+        description: 'This description? Yep! You guessed it! A visual test!',
+        img: artImg,
         link: 'https://www.google.com'
       }
     ]

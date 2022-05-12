@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { saveAs } from "file-saver";
 import { Card, CardActions, CardMedia, Button } from '@mui/material';
-import resImg from '../../images/res.JPG';
+import resImg from '../../../../../../images/res.JPG';
 import PDFModal from './PDFModal';
 import resPDF from '../Resume.pdf'
 
