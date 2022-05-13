@@ -6,6 +6,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundImage: `url(${profileImage})`,
+    border: '3px solid darkGrey',
     height: 350,
     width: 350,
     borderRadius: '50%',

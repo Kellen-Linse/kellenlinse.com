@@ -6,8 +6,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: { xs: '90%',  sm: '70%',  md: '50%', xl: '40%' },
-  height: { xs: '90%',  sm: '70%', md: '70%', xl: '70%' },
+  width: { xs: '90%', sm: '70%', md: '50%', xl: '40%' },
+  height: { xs: '90%', sm: '70%', md: '70%', xl: '90%' },
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -21,24 +21,30 @@ export default function ProjectModal({ open, handleClose, card }) {
         <Stack
           height={'100%'}
           direction='column'
-          justifyContent='space-around'
+          justifyContent='space-between'
           alignItems='stretch'
         >
-       <Box >
-       <Typography
-            variant='h7'
-            component='h2'
-            sx={{color: 'secondary.main', mb: 1 }}
-          >
-            {card.title}
-          </Typography>
-          <Divider />
-       </Box>
-          <ProjectCarousel projects={card.projects} />
+          <Box>
+            <Typography
+              variant='h7'
+              component='h2'
+              sx={{ color: 'secondary.main', my: 1 }}
+            >
+              {card.title}
+            </Typography>
+            <Divider />
+          </Box>
+          <Box sx={{ flexGrow: 1, height: '100%', overflow: 'auto' }}>
+            <ProjectCarousel projects={card.projects} />
+          </Box>
+            <Divider />
           <Box display='flex' justifyContent='flex-end'>
-          <Button sx={{width: 100, fontSize:'1.1em', color: 'secondary.main'}} onClick={() => handleClose()}>
-            Close
-          </Button>
+            <Button
+              sx={{ width: 100, fontSize: '1.1em', color: 'secondary.main' }}
+              onClick={() => handleClose()}
+            >
+              Close
+            </Button>
           </Box>
         </Stack>
       </Box>

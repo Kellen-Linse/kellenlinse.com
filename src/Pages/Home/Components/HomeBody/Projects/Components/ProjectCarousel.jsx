@@ -13,10 +13,8 @@ import {
 export default function ProjectCarousel({ projects }) {
   return (
     <Carousel
-      duration={3000}
       interval={10000}
       navButtonsAlwaysVisible
-      animation='slide'
     >
       {projects.map((project, i) => (
         <Item key={i} project={project} />
@@ -27,13 +25,7 @@ export default function ProjectCarousel({ projects }) {
 
 function Item({ project }) {
   return (
-    <Card elevation={0} sx={{ height: 600 }}>
-      <Stack
-        height={'100%'}
-        direction='column'
-        justifyContent='space-around'
-        alignItems='center'
-      >
+    <Card elevation={0} >
         <Typography variant='h5' sx={{ my: { xs: 1, md: 3 } }}>
           {project.title}
         </Typography>
@@ -41,8 +33,9 @@ function Item({ project }) {
           component='img'
           image={project.img}
           alt={project.img}
-          sx={{ px: { xs: 0, md: 12 }, height: { xs: '50%', md: '60%' } }}
+          sx={{ px: { xs: 0, md: 12 }, height: {xs: '175px', md: '400px'} }}
         />
+        <Stack justifyContent='space-between' sx={{ height: {xs: '200px', md: '200px', xl: '350px'}}} >
 
         <CardContent>
           <Typography sx={{ p: { xs: 0, md: 3 } }}>
@@ -50,15 +43,13 @@ function Item({ project }) {
           </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: 'center', p: 0, m: 0 }}>
-          <Button
-            variant='contained'
-            sx={{ color: 'secondary.main' }}
-            href={project.link}
-          >
+        {project.link &&
+          <Button href={project.link} variant='outlined'>
             Check it out!
-          </Button>
+          </Button>}
         </CardActions>
-      </Stack>
+        </Stack>
+
     </Card>
   );
 }

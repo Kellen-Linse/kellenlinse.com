@@ -27,6 +27,12 @@ const projectInfo = [
         description: 'This description? Yep! You guessed it! A test!',
         img: webDevImg,
         link: 'https://www.google.com'
+      },
+      {
+        title: 'This is a IoT test title!',
+        description: 'This description? Yep! You guessed it! An IoT test!',
+        img: IoTImg,
+        link: ''
       }
     ]
   },
