@@ -13,7 +13,7 @@ export const Bouncer = ({ children, delay=0 }) => {
 
   return (
     <StyleRoot>
-      <div className='test' style={ styles.bounce }>{ children }</div>
+      <div className='bouncer' style={ styles.bounce }>{ children }</div>
     </StyleRoot>
   );
 };

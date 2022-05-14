@@ -13,7 +13,7 @@ export const FadeInRight = ({ children, duration=2 }) => {
 
   return (
     <StyleRoot>
-      <div className='test' style={ styles.fadeInRight }>{ children }</div>
+      <div className='fade-in-right' style={ styles.fadeInRight }>{ children }</div>
     </StyleRoot>
   );
 };
