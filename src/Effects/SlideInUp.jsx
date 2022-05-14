@@ -13,7 +13,7 @@ export const SlideInUp = ({ children, delay=0 }) => {
 
   return (
     <StyleRoot>
-      <div className='test' style={ styles.slideInUp }>{ children }</div>
+      <div className='slide-in-up' style={ styles.slideInUp }>{ children }</div>
     </StyleRoot>
   );
 };

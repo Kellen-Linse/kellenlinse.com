@@ -1,5 +1,5 @@
 import { Grid, Stack } from '@mui/material';
-
+import {SlideInUp} from '../../../../../Effects/SlideInUp'
 import { SlideInLeft } from '../../../../../Effects/SlideInLeft';
 import Title from '../../Shared_Components/Title';
 import Bio from './Components/Bio';
@@ -27,10 +27,18 @@ function About() {
           justifyContent='space-between'
           alignItems='center'
         >
-          <SlideInLeft>
+          <SlideInLeft >
             <Headshot />
           </SlideInLeft>
-          <Bio />
+
+          <SlideInUp>
+
+            <Bio />
+          </SlideInUp>
+
+
+
+
         </Stack>
       </Grid>
       <Grid

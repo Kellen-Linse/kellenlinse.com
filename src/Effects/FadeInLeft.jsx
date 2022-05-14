@@ -12,7 +12,7 @@ export const FadeInLeft = ({ children, duration=2 }) => {
 
   return (
     <StyleRoot>
-      <div className='test' style={ styles.fadeInLeft }>{ children }</div>
+      <div className='fade-in-left' style={ styles.fadeInLeft }>{ children }</div>
     </StyleRoot>
   );
 };

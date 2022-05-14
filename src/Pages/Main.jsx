@@ -4,9 +4,8 @@ import WelcomeScreen from './WelcomeScreen/WelcomeScreen';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { useCallback } from 'react';
-import particlesOptions from '../Particles/particles.json';
+import particlesOptions from './Particles/particles.json';
 import { FadeIn } from '../Effects/FadeIn';
-
 
 function Main({ lightObj }) {
   // Holds state of welcome screen

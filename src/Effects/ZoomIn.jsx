@@ -11,7 +11,7 @@ export const ZoomIn = ({ children, duration=2 }) => {
 
   return (
     <StyleRoot>
-      <div className='test' style={ styles.zoomIn }>{ children }</div>
+      <div className='zoom-in' style={ styles.zoomIn }>{ children }</div>
     </StyleRoot>
   );
 };
