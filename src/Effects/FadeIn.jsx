@@ -2,10 +2,10 @@ import React from 'react';
 import { fadeIn } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 
-export const FadeIn = ({ children, delay=0, duration=2 }) => {
+export const FadeIn = ({ children, delay=0 }) => {
   const styles = {
     fadeIn: {
-      animation: `x ${duration}s`,
+      animation: 'x 2s',
       animationName: Radium.keyframes(fadeIn, 'fadeIn'),
       animationDelay: `${delay}s`
     },
