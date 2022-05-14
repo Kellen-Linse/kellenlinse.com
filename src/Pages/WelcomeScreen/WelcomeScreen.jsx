@@ -79,7 +79,20 @@ function ClickPrompt() {
   );
 }
 
+const fontSizeObj = {
+  xs: '1.2em',
+  // theme.breakpoints.up('xs')
+  sm: '1.4em',
+  // theme.breakpoints.up('sm')
+  md: '2em',
+  // theme.breakpoints.up('md')
+  lg: '2.5em',
+  // theme.breakpoints.up('lg')
+  xl: '3em', // theme.breakpoints.up('xl')
+}
+
 function WelcomeMessage() {
+
   return (
     <>
       <FadeInLeft>
@@ -88,17 +101,7 @@ function WelcomeMessage() {
           variant='h4'
           sx={{
             textAlign: 'center',
-            fontSize: {
-              xs: '1.2em',
-              // theme.breakpoints.up('xs')
-              sm: '1.4em',
-              // theme.breakpoints.up('sm')
-              md: '2em',
-              // theme.breakpoints.up('md')
-              lg: '2.5em',
-              // theme.breakpoints.up('lg')
-              xl: '3em', // theme.breakpoints.up('xl')
-            },
+            fontSize: fontSizeObj,
           }}
         >
           Hi, I'm{' '}
@@ -106,6 +109,7 @@ function WelcomeMessage() {
             style={{
               color: '#26c6da',
               fontWeight: 'bold',
+              fontSize: '1.2em'
             }}
           >
             Kellen Linse
@@ -119,17 +123,7 @@ function WelcomeMessage() {
           variant='h4'
           sx={{
             textAlign: 'center',
-            fontSize: {
-              xs: '1.2em',
-              // theme.breakpoints.up('xs')
-              sm: '1.4em',
-              // theme.breakpoints.up('sm')
-              md: '2em',
-              // theme.breakpoints.up('md')
-              lg: '2.5em',
-              // theme.breakpoints.up('lg')
-              xl: '3em', // theme.breakpoints.up('xl')
-            },
+            fontSize: fontSizeObj,
           }}
         >
           IoT and Full Stack software developer,
@@ -141,17 +135,7 @@ function WelcomeMessage() {
           variant='h4'
           sx={{
             textAlign: 'center',
-            fontSize: {
-              xs: '1.2em',
-              // theme.breakpoints.up('xs')
-              sm: '1.4em',
-              // theme.breakpoints.up('sm')
-              md: '2em',
-              // theme.breakpoints.up('md')
-              lg: '2.5em',
-              // theme.breakpoints.up('lg')
-              xl: '3em', // theme.breakpoints.up('xl')
-            },
+            fontSize: fontSizeObj
           }}
         >
           Interactive and visual artist.
@@ -169,17 +153,7 @@ function EnterButton({ setWelcome }) {
       sx={{
         color: 'white',
         borderColor: 'white',
-        fontSize: {
-          xs: '1.2em',
-          // theme.breakpoints.up('xs')
-          sm: '1.4em',
-          // theme.breakpoints.up('sm')
-          md: '2em',
-          // theme.breakpoints.up('md')
-          lg: '2.5em',
-          // theme.breakpoints.up('lg')
-          xl: '3em', // theme.breakpoints.up('xl')
-        },
+        fontSize: fontSizeObj,
         m: 3,
         borderWidth: 2,
       }}
