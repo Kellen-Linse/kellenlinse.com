@@ -101,7 +101,7 @@ function WelcomeMessage() {
             },
           }}
         >
-          Hello, I'm{' '}
+          Hi, I'm{' '}
           <span
             style={{
               color: '#26c6da',
