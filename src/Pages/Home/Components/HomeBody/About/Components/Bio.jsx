@@ -7,7 +7,7 @@ const styles = {
     minHeight: '300px',
     textAlign: 'center',
     m: 4,
-    mt: 8,
+    mt: 2,
     color: 'white',
   },
 };
@@ -16,7 +16,7 @@ function Bio() {
   return (
     <Box justifyContent='center' alignContent='center' display='flex'>
       <Paper sx={styles.infoPaper}>
-        <Typography variant='h4' sx={{ m: 4 }}>
+        <Typography variant='h4' sx={{ m: 4, mt: 0 }}>
           Hello, my name is {' '}
           <span
             style={{

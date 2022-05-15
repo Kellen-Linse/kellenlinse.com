@@ -34,7 +34,7 @@ export default function ProjectModal({ open, handleClose, card }) {
             </Typography>
             <Divider />
           </Box>
-          <Box sx={{ flexGrow: 1, height: '100%', overflow: 'auto' }}>
+          <Box sx={{ flexGrow: 1, height: '100%'}}>
             <ProjectCarousel projects={card.projects} />
           </Box>
             <Divider />

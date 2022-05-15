@@ -7,7 +7,7 @@ import {
   Toolbar,
   Box,
   AppBar,
-  Link
+  Link,
 } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -20,7 +20,7 @@ const buttonStyling = {
   transition: 'transform 0.15s ease-in-out',
   '&:hover': { transform: 'scale3d(1.05, 1.05, 1)' },
   fontFamily: 'IBM Plex Mono',
-  fontSize: '1.3em' 
+  fontSize: '1.3em',
 };
 
 const HeaderAppBar = ({ lightObj, setWelcome }) => {
@@ -37,7 +37,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
   return (
     <AppBar
       position='fixed'
-      sx={{ borderBottom: 3, borderColor: 'secondary.main'}}
+      sx={{ borderBottom: 3, borderColor: 'secondary.main' }}
     >
       <Toolbar>
         <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
@@ -49,8 +49,13 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             <DeveloperBoardIcon />
           </IconButton>
 
-          <Link variant='h5'
-            sx={{ flexGrow: 1, ml: 0, fontFamily: 'IBM Plex Mono'}} underline="none" color='#000' href='https://www.linkedin.com/in/kellen-linse/'>
+          <Link
+            variant='h5'
+            sx={{ flexGrow: 1, ml: 0, fontFamily: 'IBM Plex Mono' }}
+            underline='none'
+            color='#000'
+            href='https://www.linkedin.com/in/kellen-linse/'
+          >
             KELLEN LINSE
           </Link>
         </Box>
@@ -62,8 +67,8 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             justifyContent: 'end',
             mr: {
               xs: 2,
-              sm: 1
-            }
+              sm: 1,
+            },
           }}
         >
           <IconButton onClick={handleOpenNavMenu} color='inherit'>
@@ -160,10 +165,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             spy={true}
             smooth={true}
           >
-            <Button
-              color='inherit'
-              sx={buttonStyling}
-            >
+            <Button color='inherit' sx={buttonStyling}>
               About
             </Button>
           </ScrollLink>
@@ -175,10 +177,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             spy={true}
             smooth={true}
           >
-            <Button
-              color='inherit'
-              sx={buttonStyling}
-            >
+            <Button color='inherit' sx={buttonStyling}>
               Projects
             </Button>
           </ScrollLink>
@@ -190,10 +189,7 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             spy={true}
             smooth={true}
           >
-            <Button
-              color='inherit'
-              sx={buttonStyling}
-            >
+            <Button color='inherit' sx={buttonStyling}>
               Resume
             </Button>
           </ScrollLink>
@@ -205,15 +201,12 @@ const HeaderAppBar = ({ lightObj, setWelcome }) => {
             spy={true}
             smooth={true}
           >
-            <Button
-              color='inherit'
-              sx={buttonStyling}
-            >
+            <Button color='inherit' sx={buttonStyling}>
               Contact
             </Button>
           </ScrollLink>
           <Button
-          sx={buttonStyling}
+            sx={buttonStyling}
             onClick={() => lightObj.setLight(!lightObj.light)}
             color='inherit'
           >

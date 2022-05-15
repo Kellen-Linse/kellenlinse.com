@@ -10,7 +10,7 @@ const cardStyle = {
   width: {xs: 345, md: 500}, 
   mb: 5,
   transition: "transform 0.15s ease-in-out",
-  "&:hover": { transform: "scale3d(1.1, 1.1, 1)" },
+  "&:hover": { transform: "scale3d(1.1, 1.1, 1)" }
 }
 
 export default function ProjectCard({ card }) {

@@ -12,10 +12,7 @@ import {
 
 export default function ProjectCarousel({ projects }) {
   return (
-    <Carousel
-      interval={10000}
-      navButtonsAlwaysVisible
-    >
+    <Carousel interval={10000} navButtonsAlwaysVisible>
       {projects.map((project, i) => (
         <Item key={i} project={project} />
       ))}
@@ -25,31 +22,37 @@ export default function ProjectCarousel({ projects }) {
 
 function Item({ project }) {
   return (
-    <Card elevation={0} >
-        <Typography variant='h5' sx={{ my: { xs: 1, md: 3 } }}>
-          {project.title}
-        </Typography>
-        <CardMedia
-          component='img'
-          image={project.img}
-          alt={project.img}
-          sx={{ px: { xs: 0, md: 12 }, height: {xs: '175px', md: '400px'} }}
-        />
-        <Stack justifyContent='space-between' sx={{ height: {xs: '200px', md: '200px', xl: '350px'}}} >
-
+    <Card elevation={0} sx={{  height: '100%',
+    overflow: 'auto'}}>
+      <Typography variant='h5' sx={{ my: { xs: 1, md: 3 } }}>
+        {project.title}
+      </Typography>
+      <CardMedia
+        component='img'
+        image={project.img}
+        alt={project.img}
+        sx={{ px: { xs: 0, md: 12 }, height: { xs: '175px', md: '400px' }, objectFit: 'contain',}}
+      />
+      <Stack
+        justifyContent='space-between'
+        sx={{ height: { xs: '200px', md: '200px', xl: '350px' } }}
+      >
         <CardContent>
           <Typography sx={{ p: { xs: 0, md: 3 } }}>
             {project.description}
           </Typography>
+          <Typography sx={{ p: { xs: 0, md: 3 } }}>
+            {project.tech && `Tech: ${project.tech}`}
+          </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: 'center', p: 0, m: 0 }}>
-        {project.link &&
-          <Button href={project.link} variant='outlined'>
-            Check it out!
-          </Button>}
+          {project.link && (
+            <Button href={project.link} variant='outlined'>
+              Check it out!
+            </Button>
+          )}
         </CardActions>
-        </Stack>
-
+      </Stack>
     </Card>
   );
 }
