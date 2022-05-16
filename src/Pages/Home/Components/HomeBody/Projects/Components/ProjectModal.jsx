@@ -7,7 +7,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: { xs: '90%', sm: '70%', md: '50%', xl: '40%' },
-  height: { xs: '90%', sm: '70%', md: '70%', xl: '90%' },
+  height: { xs: '85%', sm: '70%', md: '70%', xl: '80%' },
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -27,14 +27,14 @@ export default function ProjectModal({ open, handleClose, card }) {
           <Box>
             <Typography
               variant='h7'
-              component='h2'
+              component='h3'
               sx={{ color: 'secondary.main', my: 1 }}
             >
               {card.title}
             </Typography>
             <Divider />
           </Box>
-          <Box sx={{ flexGrow: 1, height: '100%'}}>
+          <Box sx={{ flexGrow: 1, height: '100%', overflow: 'auto'}}>
             <ProjectCarousel projects={card.projects} />
           </Box>
             <Divider />

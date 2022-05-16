@@ -17,12 +17,12 @@ function Bio() {
     <Box justifyContent='center' alignContent='center' display='flex'>
       <Paper sx={styles.infoPaper}>
         <Typography variant='h4' sx={{ m: 4, mt: 0 }}>
-          Hello, my name is {' '}
+          Hello, my name is{' '}
           <span
             style={{
               color: '#26c6da',
               fontWeight: 'bold',
-              fontSize: '1.2em'
+              fontSize: '1.2em',
             }}
           >
             Kellen
@@ -31,55 +31,64 @@ function Bio() {
         </Typography>
 
         <Typography variant='h4' sx={{ m: 4 }}>
-          I am a Seattle based           <span
-            style={{
-              color: '#26c6da',
-              fontWeight: 'bold',
-            }}
-          >
-            software developer
-          </span>, <span
-            style={{
-              color: '#26c6da',
-              fontWeight: 'bold',
-            }}
-          >
-           visual artist
-          </span>, and <span
-            style={{
-              color: '#26c6da',
-              fontWeight: 'bold',
-            }}
-          >
-           maker
-          </span>.
-        </Typography>
-
-        <Typography variant='h5' sx={{ m: 2 }}>
-          My expertise and interests lie at the edge of the <span
-            style={{
-              color: '#26c6da',
-              fontWeight: 'bold',
-            }}
-          >
-           digital
-          </span> and the {' '}
+          I am a Seattle based{' '}
           <span
             style={{
               color: '#26c6da',
               fontWeight: 'bold',
             }}
           >
-           physical
-          </span>; in IoT and full stack software development, in interactive
-          visual art, and product development.
+            software developer
+          </span>
+          ,{' '}
+          <span
+            style={{
+              color: '#26c6da',
+              fontWeight: 'bold',
+            }}
+          >
+            visual artist
+          </span>
+          , and{' '}
+          <span
+            style={{
+              color: '#26c6da',
+              fontWeight: 'bold',
+            }}
+          >
+            maker
+          </span>
+          .
         </Typography>
 
         <Typography variant='h5' sx={{ m: 2 }}>
-          My growth mindset, constant curiosity, and drive to create have led me to develop a
-          multitude of skills across several disciplines, including low voltage
-          and vehicle electronics, basic CAD design, 3D printing, circuit board
-          design, product design, and software development.
+          My expertise and interests lie at the edge of the{' '}
+          <span
+            style={{
+              color: '#26c6da',
+              fontWeight: 'bold',
+            }}
+          >
+            digital
+          </span>{' '}
+          and the{' '}
+          <span
+            style={{
+              color: '#26c6da',
+              fontWeight: 'bold',
+            }}
+          >
+            physical
+          </span>
+          ; in IoT and full stack software development, in product development,
+          and in interactive visual art.
+        </Typography>
+
+        <Typography variant='h5' sx={{ m: 2 }}>
+          My growth mindset, constant curiosity, and drive to create have led me
+          to develop a multitude of skills across several disciplines, including
+          vehicle and low voltage electronics, basic CAD design, 3D printing,
+          circuit board design, product design, and software development.
         </Typography>
       </Paper>
     </Box>

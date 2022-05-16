@@ -7,16 +7,17 @@ import skillsList from './SkillsList';
 const gridStyle = {
   border: '4px solid white',
   width: {
-    xs: '100px',
+    xs: '110px',
     lg: '140px',
   },
   height: {
     xs: '100px',
     lg: '150px',
   },
-  justifyContent: 'center',
-  alignContent: 'center',
   borderRadius: '5%',
+  justifyContent: 'center',
+  alignItems: 'center',
+  direction: 'column',
   m: 3,
   px: 3,
   pt: 2,
@@ -32,28 +33,33 @@ function Skills() {
     <Grid item xs={12} container justifyContent='center' alignContent='center'>
       {skillsList.map((skill, i) => {
         return (
+          <FadeIn key={i}>
           <Grid
-            container
+            container  justifyContent='center' alignContent='center'
             sx={{
               ...gridStyle,
               borderColor: skill.color,
               display: skill.display,
             }}
-            key={i}
+            
           >
-            <FadeIn>
+
               <i
                 style={{
                   fontSize: matches ? '50px' : '80px',
                   color: 'whitesmoke',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  direction: 'column',
                 }}
                 className={skill.class}
               ></i>
-              <Typography sx={{ mt: 0, color: 'whitesmoke' }}>
+              <Typography textAlign='center' sx={{ mt: 0, color: 'whitesmoke' }}>
                 {skill.title}
               </Typography>
-            </FadeIn>
+        
           </Grid>
+              </FadeIn>
         );
       })}
     </Grid>
