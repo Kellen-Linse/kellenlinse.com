@@ -51,7 +51,7 @@ const projectInfo = [
       },
       {
         title: 'This Site!',
-        description: "My personal portfolio site. You're lookin at it!",
+        description: "My personal portfolio site. You're lookin at it! Be sure to check out the mobile version as well!",
         tech: 'React, Material UI',
         img: persSite,
         link: 'https://github.com/Kellen-Linse/kellenlinse.com',

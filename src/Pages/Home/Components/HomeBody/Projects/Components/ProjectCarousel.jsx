@@ -12,7 +12,7 @@ import {
 
 export default function ProjectCarousel({ projects }) {
   return (
-    <Carousel interval={20000} navButtonsAlwaysVisible stopAutoPlayOnHover>
+    <Carousel interval={20000} navButtonsAlwaysVisible stopAutoPlayOnHover swipe='false'>
       {projects.map((project, i) => (
         <Item key={i} project={project} />
       ))}
