@@ -22,7 +22,7 @@ export default function ProjectCarousel({ projects }) {
 
 function Item({ project }) {
   return (
-    <Card elevation={0} sx={{ backgroundColor: '#505050', minHeight: '600px', overflow: 'auto', borderBottom: '2px solid black', py: 2 }}>
+    <Card elevation={0} sx={{ backgroundColor: '#616161',color: 'white', minHeight: '600px', overflow: 'auto', borderBottom: '2px solid black', py: 2 }}>
       <Typography variant='h5' sx={{ my: { xs: 1, md: 3 } }}>
         {project.title}
       </Typography>

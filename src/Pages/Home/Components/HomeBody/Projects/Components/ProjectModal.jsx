@@ -8,7 +8,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: { xs: '90%', sm: '70%', md: '50%', xl: '40%' },
   height: { xs: '87%', sm: '70%', md: '70%', xl: '80%' },
-  backgroundColor: 'background.paper',
+  backgroundColor: '#424242',
   border: '2px solid #000',
   boxShadow: 24,
   textAlign: 'center',
