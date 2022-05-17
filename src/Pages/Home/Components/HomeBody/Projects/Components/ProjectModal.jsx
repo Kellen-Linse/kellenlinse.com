@@ -28,7 +28,7 @@ export default function ProjectModal({ open, handleClose, card }) {
             <Typography
               variant='h7'
               component='h3'
-              sx={{ color: 'secondary.main', my: 1 }}
+              sx={{ color: 'secondary.main', my: 1, fontSize: {md: '1.2em'} }}
             >
               {card.title}
             </Typography>
