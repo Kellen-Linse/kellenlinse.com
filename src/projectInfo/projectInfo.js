@@ -128,7 +128,7 @@ const projectInfo = [
       },
       {
         title: '5K Night at Kremwork Night Club',
-        description: 'Interactive Art Installation for 5K, a monthly event at Kremwork night club. This art installation picked up viewers via the Azure Kinect depth camera and allow them interact with the projection in front of them, moving around the smaller 5K logos within the large 5K logo.',
+        description: 'Interactive Art Installation for 5K, a monthly event at Kremwork night club. This art installation picks up viewers via the Azure Kinect depth camera and allow them interact with the projection in front of them, moving around the smaller 5K logos within the large 5K logo.',
         tech: 'Azure Kinect Depth Camera, TouchDesigner, Synethesia, Resolume.',
         img: fiveK,
         link: '',
