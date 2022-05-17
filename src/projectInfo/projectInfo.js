@@ -51,7 +51,7 @@ const projectInfo = [
         buttonMsg: '',
       },
       {
-        title: 'Midi Based Controller for Interactive Art Installations.',
+        title: 'Midi Based Controller for Interactive Art Installations',
         description: 'This controller allows users to interface with art installations via a button, fade sliders, or depth sensors which are mapped to Midi outputs. It communicates with the programs running the art installation via Midi communications protocol. At it\'s heart it is run off of Teensy 3.2.',
         tech: 'Body designed and printed by me, Code written by me using C++, Platformio, MiDi Library.',
         img: midi,
@@ -61,7 +61,7 @@ const projectInfo = [
     ],
   },
   {
-    title: 'Web and Mobile Development',
+    title: 'Web / Mobile Development',
     desc: 'Full Stack and Mobile App Development Projects',
     img: webDevImg,
     projects: [

@@ -8,6 +8,7 @@ import {
   Typography,
   CardActions,
   Stack,
+  Divider,
 } from '@mui/material';
 
 export default function ProjectCarousel({ projects }) {
@@ -22,10 +23,11 @@ export default function ProjectCarousel({ projects }) {
 
 function Item({ project }) {
   return (
-    <Card elevation={0} sx={{ backgroundColor: '#616161',color: 'white', minHeight: '600px', overflow: 'auto', borderBottom: '2px solid black', py: 2 }}>
-      <Typography variant='h5' sx={{ my: { xs: 1, md: 3 } }}>
+    <Card elevation={0} sx={{ backgroundColor: '#616161',color: 'white', minHeight: '600px', overflow: 'auto', height: '100%', orderBottom: '2px solid black', py: 2 }}>
+      <Typography variant='h4' sx={{ mt: 0, mb: { xs: 1, md: 0 } }}>
         {project.title}
       </Typography>
+      <Divider  sx={{mb: 2}} />
       <CardMedia
         component='img'
         image={project.img}
@@ -34,7 +36,7 @@ function Item({ project }) {
           px: { xs: 0, md: 12 },
           height: { xs: '175px', md: '400px' },
           objectFit: 'contain',
-          borderBottom: '2px solid black'
+          my: 2
         }}
       />
       <Stack

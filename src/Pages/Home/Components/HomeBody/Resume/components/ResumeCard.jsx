@@ -27,8 +27,8 @@ export default function ResumeCard() {
         image={resImg}
       />
       <CardActions sx={{ display: 'flex', justifyContent: 'end', p: 2, mt: 2 }}>
-        <Button onClick={() => handleOpen()} variant='contained' sx={{color: 'text.secondary'}}>View</Button>
-        <Button onClick={() => saveFile()} variant='contained' sx={{color: 'text.secondary'}}>Download</Button>
+        <Button onClick={() => handleOpen()} variant='contained' size='large' sx={{color: 'text.secondary'}}>View</Button>
+        <Button onClick={() => saveFile()} variant='contained' size='large' sx={{color: 'text.secondary'}}>Download</Button>
       </CardActions>
       <PDFModal open={open} handleClose={handleClose} />
     </Card>

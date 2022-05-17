@@ -1,4 +1,4 @@
-import { Button, Stack, Box, Typography, Modal, Divider } from '@mui/material';
+import { Button, Stack, Box, Modal, Divider } from '@mui/material';
 import ProjectCarousel from './ProjectCarousel';
 
 const style = {
@@ -23,17 +23,8 @@ export default function ProjectModal({ open, handleClose, card }) {
           direction='column'
           justifyContent='space-between'
           alignItems='stretch'
+          sx={{pt: 4}}
         >
-          <Box>
-            <Typography
-              variant='h7'
-              component='h3'
-              sx={{ color: 'secondary.main', my: 1, fontSize: {md: '1.2em'} }}
-            >
-              {card.title}
-            </Typography>
-            <Divider />
-          </Box>
           <Box sx={{ flexGrow: 1, height: '100%', overflow: 'auto'}}>
             <ProjectCarousel projects={card.projects} />
           </Box>
