@@ -11,7 +11,7 @@ const styles = {
     width: 350,
     borderRadius: '50%',
     backgroundSize: 'cover',
-    mb: {xs: 0, md: 4}
+    mb: {xs: 2, md: 4}
   }
 }
 
