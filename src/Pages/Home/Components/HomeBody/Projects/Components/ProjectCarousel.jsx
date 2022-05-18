@@ -23,7 +23,7 @@ export default function ProjectCarousel({ projects }) {
 
 function Item({ project }) {
   return (
-    <Card elevation={0} sx={{ backgroundColor: '#616161',color: 'white', minHeight: '600px', overflow: 'auto', height: '100%', orderBottom: '2px solid black', py: 2 }}>
+    <Card elevation={0} sx={{ backgroundColor: '#616161', color: 'white', minHeight: '600px', height: '100%', orderBottom: '2px solid black', py: 2 }}>
       <Typography variant='h4' sx={{ mt: 0, mb: { xs: 1, md: 0 } }}>
         {project.title}
       </Typography>
@@ -41,7 +41,7 @@ function Item({ project }) {
       />
       <Stack
         justifyContent='space-between'
-        sx={{ height: { xs: '200px', md: '200px', xl: '350px' } }}
+        sx={{ flexGrow: 1, height: '100%', overflow: 'auto'}}
       >
         <CardContent sx={{ m: 1 }}>
           <Typography variant='h6' sx={{ py: { xs: 0, md: 2 }, px: {xs: 3, md: 8}}}>

@@ -17,7 +17,7 @@ function Bio() {
     <Box justifyContent='center' alignContent='center' display='flex'>
       <Paper sx={styles.infoPaper}>
         <Typography variant='h4' sx={{ m: 4, mt: 0 }}>
-          Hello, my name is{' '}
+          Hi, my name is{' '}
           <span
             style={{
               color: '#26c6da',

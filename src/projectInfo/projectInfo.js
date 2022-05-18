@@ -69,7 +69,7 @@ const projectInfo = [
         title: 'Knect.dev',
         description:
           'Knect.dev is a website that assists users in their search for a new job. Knect.dev allows users to effectively track and document the positions they have applied for. Storing the job details, company info, and any contacts they may have within the company, as well as their most up to date interactions and current status of any given application.',
-        tech: 'Built with Javascript, React, Node.js, Express, Redux, Ionic, SASS, React-Vis,PostgreSQL, hosted on Heroku, and Netlify, managed with Git, Github, andGithub Projects.',
+        tech: 'Built with Javascript, React, Node.js, Express, Redux, Ionic, SASS, React-Vis, PostgreSQL, hosted on Heroku, and Netlify, managed with Git, Github, andGithub Projects.',
         img: knectDev,
         link: 'https://github.com/Knect-Dev',
         buttonMsg: 'Github',
@@ -78,7 +78,7 @@ const projectInfo = [
         title: 'Event Egg',
         description:
           'EventEgg is an event management platform, it allows users to search and save upcoming events in their area and suggests events based on user location and preferences.',
-        tech: 'Built with Javascript, React, Node.js, Express, CSS3, SASS, HTML5, MongoDB,Ticketmaster Discovery API, GitHub, Git.',
+        tech: 'Built with Javascript, React, Node.js, Express, CSS3, SASS, HTML5, MongoDB, Ticketmaster Discovery API, GitHub, Git.',
         img: eventEgg,
         link: 'https://github.com/event-egg',
         buttonMsg: 'Github',
@@ -95,7 +95,7 @@ const projectInfo = [
       {
         title: 'LightBase Wifi App',
         description:
-          'Flutter based app for controlling LED lighting via a websocket connection over WiFi. Works in conjunction with microcontrollers I designed and built utilizing ESP8266 SoCs. See more about those microcontrollers in the IoT/Embedded section. There is a bluetooth variant in active development as well.',
+          'Flutter based mobile application for controlling LED lighting via a websocket connection over WiFi. Works in conjunction with microcontrollers I designed and built utilizing ESP8266 SoCs. See more about those microcontrollers in the IoT/Embedded section. There is also a bluetooth variant in active development.',
         tech: 'Dart, Flutter, Multicast DNS, Websockets',
         img: lightBaseWifi,
         link: '',
@@ -111,7 +111,7 @@ const projectInfo = [
     projects: [
       {
         title: 'APOG Music Festival',
-        description: 'Interactive Art Installation for APOG Music Festival. This art installation had two different modes, both of which picked up viewers via the Azure Kinect depth camera and allow them to modify or interact with the projection in front of them.',
+        description: 'Interactive Art Installation for APOG Music Festival. This art installation had two different modes, both of which recognized the viewer(s) via an Azure Kinect depth camera, allowing them to modify or interact with the display in front of them.',
         tech: 'Azure Kinect Depth Camera, TouchDesigner, Synethesia, Resolume.',
         img: artInstall,
         link: '',
@@ -128,7 +128,7 @@ const projectInfo = [
       },
       {
         title: '5K Night at Kremwork Night Club',
-        description: 'Interactive Art Installation for 5K, a monthly event at Kremwork night club. This art installation picks up viewers via the Azure Kinect depth camera and allow them interact with the projection in front of them, moving around the smaller 5K logos within the large 5K logo.',
+        description: 'Interactive Art Installation for 5K, a monthly event at Kremwork night club. The iteration of this art installation pictured recognized the viewer(s) via an Azure Kinect depth camera, allowing them to interact with the projection in front of them, moving around the smaller 5K logos within the large 5K logo.',
         tech: 'Azure Kinect Depth Camera, TouchDesigner, Synethesia, Resolume.',
         img: fiveK,
         link: '',
