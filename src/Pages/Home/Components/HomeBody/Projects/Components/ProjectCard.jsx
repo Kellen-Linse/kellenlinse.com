@@ -21,7 +21,7 @@ export default function ProjectCard({ card }) {
   return (
     <>
       <Card raised sx={cardStyle} onClick={() => handleOpen()}>
-            <Typography gutterBottom variant='h4' component='div' textAlign='center' sx={{m: 3}}>
+            <Typography gutterBottom variant='h4' component='div' textAlign='center' sx={{m: 3, textShadow: "2px 2px 2px black"}}>
               {card.title}
             </Typography>
           <CardMedia
@@ -32,7 +32,7 @@ export default function ProjectCard({ card }) {
           />
           <CardContent>
             <Divider />
-            <Typography sx={{ mt: 3 }} variant='body2' color='text.primary'>
+            <Typography sx={{ mt: 3, textAlign: 'center', textShadow: "1px 1px 1px black" }} variant='h6' color='text.primary'>
               {card.desc}
             </Typography>
           </CardContent>

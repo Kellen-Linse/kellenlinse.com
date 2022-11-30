@@ -1,8 +1,8 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { useWindowWidth } from '@wojtekmaj/react-hooks';
-import {Box, Button, Grid, Modal,  } from '@mui/material';
-import pdf from '../Resume.pdf';
+import { Box, Button, Grid, Modal } from '@mui/material';
+import pdf from '../Resume-p.pdf';
 
 const style = {
   position: 'absolute',
@@ -15,43 +15,51 @@ const style = {
   p: 4,
 };
 
-export default function PDFModal({open, handleClose}) {
+export default function PDFModal({ open, handleClose }) {
   
-  function adjustWidth(width){
+  function adjustWidth(width) {
     let adjWidth;
 
-    if(width < 500){
+    if (width < 500) {
       adjWidth = 350;
-    } else if (width < 650){
+    } else if (width < 650) {
       adjWidth = 500;
-    } else if (width < 800){
+    } else if (width < 800) {
       adjWidth = 600;
     } else {
       adjWidth = 700;
     }
-    
     return adjWidth;
   }
 
   const width = adjustWidth(useWindowWidth());
 
   return (
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby='modal-modal-title'
-        aria-describedby='modal-modal-description'
-      >
-        <Box sx={style}>
-          <Document
-            file={pdf}
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby='modal-modal-title'
+      aria-describedby='modal-modal-description'
+    >
+      <Box sx={style}>
+        <Document file={pdf}>
+          <Page
+            renderMode='svg'
+            renderAnnotationLayer={false}
+            width={width}
+            pageNumber={1}
+          />
+        </Document>
+        <Grid container item xs={12} justifyContent='end'>
+          <Button
+            variant='outlined'
+            sx={{ mt: 2, mr: 2 }}
+            onClick={() => handleClose()}
           >
-            <Page renderMode='svg' renderAnnotationLayer={false} width={width} pageNumber={1}/>
-          </Document>
-        <Grid container item xs={12} justifyContent="end">
-        <Button variant='outlined' sx={{mt: 2, mr: 2}} onClick={()=> handleClose()}>Close</Button>
+            Close
+          </Button>
         </Grid>
-        </Box>
-      </Modal>
+      </Box>
+    </Modal>
   );
 }
