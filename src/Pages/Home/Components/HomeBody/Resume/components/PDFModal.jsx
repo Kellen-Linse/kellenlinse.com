@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { useWindowWidth } from '@wojtekmaj/react-hooks';
 import { Box, Button, Grid, Modal } from '@mui/material';
