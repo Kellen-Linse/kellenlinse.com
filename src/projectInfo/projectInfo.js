@@ -1,5 +1,5 @@
 // Import images
-import webDevImg from '../images/birb.jpg';
+import webDevImg from '../projectInfo/resources/EventEgg.JPG';
 import IoTImg from '../images/circuit_board_cropped.jpg';
 import artImg from '../images/artImg.JPG';
 import eventEgg from '../projectInfo/resources/EventEgg.JPG';
@@ -14,6 +14,7 @@ import fiveK from '../projectInfo/resources/art_install/5K.JPG';
 import terra from '../projectInfo/resources/art_install/Terra.jpg';
 import vj from '../projectInfo/resources/art_install/vj.JPG';
 import vj2 from '../projectInfo/resources/art_install/vj2.JPG';
+
 /* project object structure
 
       {
